@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @chronicle.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @chronicle.description %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%= @chronicle.subject %>
+</p>
+
+<p>
+  <b>Value1 title:</b>
+  <%= @chronicle.value1_title %>
+</p>
+
+<p>
+  <b>Use value1:</b>
+  <%= @chronicle.use_value1 %>
+</p>
+
+<p>
+  <b>Value2 title:</b>
+  <%= @chronicle.value2_title %>
+</p>
+
+<p>
+  <b>Use value2:</b>
+  <%= @chronicle.use_value2 %>
+</p>
+
+<p>
+  <b>Value3 title:</b>
+  <%= @chronicle.value3_title %>
+</p>
+
+<p>
+  <b>Use value3:</b>
+  <%= @chronicle.use_value3 %>
+</p>
+
+
+<%= link_to 'Edit', edit_chronicle_path(@chronicle) %> |
+<%= link_to 'Back', chronicles_path %>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  subject: MyString
+  value1_title: MyString
+  use_value1: false
+  value2_title: MyString
+  use_value2: false
+  value3_title: MyString
+  use_value3: false
+
+two:
+  name: MyString
+  description: MyText
+  subject: MyString
+  value1_title: MyString
+  use_value1: false
+  value2_title: MyString
+  use_value2: false
+  value3_title: MyString
+  use_value3: false

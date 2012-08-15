@@ -1,0 +1,53 @@
+<%= form_for(@chronicle) do |f| %>
+  <% if @chronicle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@chronicle.errors.count, "error") %> prohibited this chronicle from being saved:</h2>
+
+      <ul>
+      <% @chronicle.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :subject %><br />
+    <%= f.text_field :subject %>
+  </div>
+  <div class="field">
+    <%= f.label :value1_title %><br />
+    <%= f.text_field :value1_title %>
+  </div>
+  <div class="field">
+    <%= f.label :use_value1 %><br />
+    <%= f.check_box :use_value1 %>
+  </div>
+  <div class="field">
+    <%= f.label :value2_title %><br />
+    <%= f.text_field :value2_title %>
+  </div>
+  <div class="field">
+    <%= f.label :use_value2 %><br />
+    <%= f.check_box :use_value2 %>
+  </div>
+  <div class="field">
+    <%= f.label :value3_title %><br />
+    <%= f.text_field :value3_title %>
+  </div>
+  <div class="field">
+    <%= f.label :use_value3 %><br />
+    <%= f.check_box :use_value3 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

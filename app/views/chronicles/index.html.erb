@@ -1,0 +1,39 @@
+<h1>Listing chronicles</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Subject</th>
+    <th>Value1 title</th>
+    <th>Use value1</th>
+    <th>Value2 title</th>
+    <th>Use value2</th>
+    <th>Value3 title</th>
+    <th>Use value3</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @chronicles.each do |chronicle| %>
+  <tr>
+    <td><%= chronicle.name %></td>
+    <td><%= chronicle.description %></td>
+    <td><%= chronicle.subject %></td>
+    <td><%= chronicle.value1_title %></td>
+    <td><%= chronicle.use_value1 %></td>
+    <td><%= chronicle.value2_title %></td>
+    <td><%= chronicle.use_value2 %></td>
+    <td><%= chronicle.value3_title %></td>
+    <td><%= chronicle.use_value3 %></td>
+    <td><%= link_to 'Show', chronicle %></td>
+    <td><%= link_to 'Edit', edit_chronicle_path(chronicle) %></td>
+    <td><%= link_to 'Destroy', chronicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Chronicle', new_chronicle_path %>
