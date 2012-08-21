@@ -7,7 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-        <%= link_to "try", new_user_session_path %>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <%= link_to APP_CONFIG['app_title'], root_url, :class => 'brand' %>
+                <ul class="nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Link</a></li>
+                  <li><a href="#">Link</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<%= link_to "try", new_user_session_path %>
 <%= yield %>
 
 </body>

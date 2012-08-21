@@ -1,5 +1,7 @@
 Historacle::Application.routes.draw do
 
+  get "homebase/index"
+
   devise_for :users
 
   resources :events
