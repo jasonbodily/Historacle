@@ -1,9 +1,14 @@
 Historacle::Application.routes.draw do
+
+  devise_for :users
+
   resources :events
 
   resources :chronicles
 
   resources :libraries
+
+  root :to => "homebase#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
