@@ -1,4 +1,6 @@
 class ChroniclesController < ApplicationController
+  before_filter :authenticate_user!
+
   # GET /chronicles
   # GET /chronicles.json
   def index

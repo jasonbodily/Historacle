@@ -5,6 +5,36 @@
   <%= @library.name %>
 </p>
 
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Subject</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @library.chronicles.each do |chronicle| %>
+      <tr>
+        <td><%= chronicle.name %></td>
+        <td><%= chronicle.description %></td>
+        <td><%= chronicle.subject %></td>
+        <td><%= link_to 'Show', chronicle %></td>
+        <td><%= link_to 'Edit', edit_chronicle_path(chronicle) %></td>
+        <td><%= link_to 'Destroy', chronicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Chronicle', new_chronicle_path %>
+
+
+
+
+
 
 <%= link_to 'Edit', edit_library_path(@library) %> |
 <%= link_to 'Back', libraries_path %>
