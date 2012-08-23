@@ -13,6 +13,40 @@
 
 ActiveRecord::Schema.define(:version => 20120821051615) do
 
+  create_table "chronicles", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "subject"
+    t.string   "value1_title"
+    t.boolean  "use_value1"
+    t.string   "value2_title"
+    t.boolean  "use_value2"
+    t.string   "value3_title"
+    t.boolean  "use_value3"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "events", :force => true do |t|
+    t.string   "title"
+    t.datetime "date"
+    t.string   "location"
+    t.decimal  "longitude"
+    t.decimal  "latitude"
+    t.text     "description"
+    t.string   "value1"
+    t.string   "value2"
+    t.string   "value3"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "libraries", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false
@@ -26,8 +60,6 @@ ActiveRecord::Schema.define(:version => 20120821051615) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
-    t.string   "first_name"
-    t.string   "last_name"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

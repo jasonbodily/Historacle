@@ -10,18 +10,43 @@
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
+
                 <%= link_to APP_CONFIG['app_title'], root_url, :class => 'brand' %>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li><%= link_to 'Library', chronicles_path %></li>
+                        <!--<li>Home 2</li>-->
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li class="dropdown">
+                            <% if user_signed_in? %>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <strong><%= current_user.first_name + ' ' + current_user.last_name %></strong>
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <%= link_to 'Edit profile', edit_user_registration_path %>
+                                    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+                                </ul>
+                            <% else %>
+                                <%= link_to "Login", new_user_session_path %>
+                            <% end %>
+                        </li>
+                    </ul>
+                </div>
                 <ul class="nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li><a href="#">Link</a></li>
+                  <!--<li class="active"><a href="#">Home</a></li>-->
+                  <!--<li><a href="#">Link</a></li>-->
+                  <!--<li><a href="#">Link</a></li>-->
                 </ul>
             </div>
         </div>
     </div>
 
-<%= link_to "try", new_user_session_path %>
-<%= yield %>
+    <div class="container">
+        <%= yield %>
+    </div>
 
 </body>
 </html>

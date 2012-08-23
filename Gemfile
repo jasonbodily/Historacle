@@ -7,9 +7,6 @@ gem 'bootstrap-will_paginate'
 gem 'simple_form'
 gem 'jquery-rails'
 
-gem 'sqlite3'
-
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -18,3 +15,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :development do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
