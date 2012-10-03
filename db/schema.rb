@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(:version => 20120823045713) do
 
   create_table "chronicles", :force => true do |t|
+    t.integer  "library_id"
     t.string   "name"
     t.text     "description"
     t.string   "subject"
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20120823045713) do
   end
 
   create_table "events", :force => true do |t|
+    t.integer  "chronicle_id"
     t.string   "title"
     t.datetime "date"
     t.string   "location"
@@ -37,15 +39,15 @@ ActiveRecord::Schema.define(:version => 20120823045713) do
     t.string   "value1"
     t.string   "value2"
     t.string   "value3"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "libraries", :force => true do |t|
     t.string   "name"
+    t.string   "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "user_id"
   end
 
   create_table "users", :force => true do |t|
