@@ -1,53 +1,32 @@
-<%= form_for(@event) do |f| %>
-  <% if @event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+<%= simple_form_for([@chronicle, @event], html: {class: 'form-horizontal'}) do |f| %>
 
-      <ul>
-      <% @event.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+   <%= f.input :title %>
+   <%= f.input :date %>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :date %><br />
-    <%= f.datetime_select :date %>
-  </div>
-  <div class="field">
-    <%= f.label :location %><br />
-    <%= f.text_field :location %>
-  </div>
-  <div class="field">
-    <%= f.label :longitude %><br />
-    <%= f.text_field :longitude %>
-  </div>
-  <div class="field">
-    <%= f.label :latitude %><br />
-    <%= f.text_field :latitude %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :value1 %><br />
-    <%= f.text_field :value1 %>
-  </div>
-  <div class="field">
-    <%= f.label :value2 %><br />
-    <%= f.text_field :value2 %>
-  </div>
-  <div class="field">
-    <%= f.label :value3 %><br />
-    <%= f.text_field :value3 %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+   <div class="control-group string">
+     <label class="control-label"></label>
+
+     <div class="controls">
+       <input class="string geocode-input" id="event_title" size="50" type="text" value="">
+       <span class="help-inline"><a href="#" class="btn submit-geocode">Set Location Info</a></span>
+     </div>
+   </div>
+
+   <div class="event-map">
+      <span>
+         <%= map_image latitude: @event.latitude, longitude: @event.longitude %>
+      </span>
+   </div>
+
+   <%= f.input :longitude %>
+   <%= f.input :latitude %>
+   <%= f.input :location, label: "Location Title" %>
+   <%= f.input :description, input_html: {rows: 3 }%>
+   <%= f.input :value1 %>
+   <%= f.input :value2 %>
+   <%= f.input :value3 %>
+
+   <div class="actions">
+     <%= f.submit %>
+   </div>
 <% end %>

@@ -1,22 +1,6 @@
-<%= form_for(@library, :html => {:class => 'form-horizontal'}) do |f| %>
-  <% if @library.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@library.errors.count, "error") %> prohibited this library from being saved:</h2>
+<%= simple_form_for(@library, :html => {:class => 'form-horizontal'}) do |f| %>
 
-      <ul>
-      <% @library.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-    <div class="control-group">
-      <label class="control-label">Library Name</label>
-      <div class="controls">
-        <%= f.text_field :name, placeholder: "Name" %>
-      </div>
-    </div>
+    <%= f.input :name %>
 
     <div class="control-group">
       <div class="controls">

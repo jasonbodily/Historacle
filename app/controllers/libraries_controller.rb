@@ -15,7 +15,8 @@ class LibrariesController < ApplicationController
   # GET /libraries/1
   # GET /libraries/1.json
   def show
-    @library = Library.find(params[:id])
+
+    @library = current_user.library || Library.create(user_id: current_user.id)
 
     respond_to do |format|
       format.html # show.html.erb

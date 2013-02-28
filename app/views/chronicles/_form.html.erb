@@ -1,37 +1,8 @@
-<%= form_for(@chronicle, :html => {:class => 'form-horizontal'}) do |f| %>
-    <% if @chronicle.errors.any? %>
-        <div id="error_explanation">
-            <h2><%= pluralize(@chronicle.errors.count, "error") %> prohibited this chronicle from being saved:</h2>
+<%= simple_form_for([@library,@chronicle], :html => {:class => 'form-horizontal'}) do |f| %>
 
-            <ul>
-            <% @chronicle.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-            <% end %>
-            </ul>
-        </div>
-    <% end %>
-
-
-    <div class="control-group">
-      <label class="control-label"><%= f.label :name %></label>
-      <div class="controls">
-        <%= f.text_field :name, placeholder: "Name" %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <label class="control-label"><%= f.label :description %></label>
-      <div class="controls">
-        <%= f.text_area :description, rows: "4", placeholder: "Description" %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <label class="control-label"><%= f.label :subject %></label>
-      <div class="controls">
-        <%= f.text_field :subject, placeholder: "Subject" %>
-      </div>
-    </div>
+   <%= f.input :name %>
+   <%= f.input :description, :input_html => {   :rows => 3 } %>
+   <%= f.input :subject %>
 
     <div class="control-group">
       <label class="control-label">Extra Attribute</label>

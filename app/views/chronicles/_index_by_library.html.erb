@@ -1,0 +1,24 @@
+<h4>Chronicles</h4>
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Subject</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @library.chronicles.each do |chronicle| %>
+  <tr>
+    <td><%= chronicle.name %></td>
+    <td><%= chronicle.description %></td>
+    <td><%= chronicle.subject %></td>
+    <td><%= link_to 'Show', library_chronicle_path(chronicle, @library) %></td>
+    <td><%= link_to 'Edit', edit_library_chronicle_path(chronicle, @library) %></td>
+    <td><%= link_to 'Destroy', chronicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'New Chronicle', new_library_chronicle_path(@library) %>

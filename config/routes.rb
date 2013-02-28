@@ -2,13 +2,23 @@ Historacle::Application.routes.draw do
 
   get "homebase/index"
 
-  devise_for :users
-
   resources :events
 
-  resources :chronicles
+  resources :chronicles do
+    resources :events
+  end
 
-  resources :libraries
+  resources :libraries do
+    resources :chronicles
+  end
+
+  devise_for :users do
+    resource :library
+  end
+
+  authenticated :user do
+    root to: "libraries#show"
+  end
 
   root :to => "homebase#index"
 

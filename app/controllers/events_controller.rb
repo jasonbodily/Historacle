@@ -26,7 +26,8 @@ class EventsController < ApplicationController
   # GET /events/new
   # GET /events/new.json
   def new
-    @event = Event.new
+    @chronicle = Chronicle.find(params[:chronicle_id])
+    @event = @chronicle.events.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,7 +43,8 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    @event = Event.new(params[:event])
+    @chronicle = Chronicle.find(params[:chronicle_id])
+    @event = @chronicle.events.build(params[:event])
 
     respond_to do |format|
       if @event.save

@@ -26,7 +26,8 @@ class ChroniclesController < ApplicationController
   # GET /chronicles/new
   # GET /chronicles/new.json
   def new
-    @chronicle = Chronicle.new
+    @library = Library.find params[:library_id]
+    @chronicle = @library.chronicles.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,7 +43,8 @@ class ChroniclesController < ApplicationController
   # POST /chronicles
   # POST /chronicles.json
   def create
-    @chronicle = Chronicle.new(params[:chronicle])
+    @library = Library.find params[:library_id]
+    @chronicle = @library.chronicles.build(params[:chronicle])
 
     respond_to do |format|
       if @chronicle.save
