@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
     </list>
     <ignored path="historacle.iws" />
@@ -42,7 +43,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="20" selection-start="439" selection-end="439" vertical-scroll-proportion="0.58914727">
+            <state line="18" column="28" selection-start="433" selection-end="433" vertical-scroll-proportion="0.55813956">
               <folding />
             </state>
           </provider>
@@ -826,7 +827,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="20" selection-start="439" selection-end="439" vertical-scroll-proportion="0.58914727">
+        <state line="18" column="28" selection-start="433" selection-end="433" vertical-scroll-proportion="0.55813956">
           <folding />
         </state>
       </provider>
