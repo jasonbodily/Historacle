@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 gem 'devise'
-gem "twitter-bootstrap-rails"
+gem "bootstrap-sass"
 gem 'bootstrap-will_paginate'
 gem 'simple_form'
 gem 'jquery-rails'
