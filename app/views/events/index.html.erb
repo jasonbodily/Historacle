@@ -8,9 +8,6 @@
     <th>Longitude</th>
     <th>Latitude</th>
     <th>Description</th>
-    <th>Value1</th>
-    <th>Value2</th>
-    <th>Value3</th>
     <th></th>
     <th></th>
     <th></th>
@@ -24,10 +21,7 @@
     <td><%= event.longitude %></td>
     <td><%= event.latitude %></td>
     <td><%= event.description %></td>
-    <td><%= event.value1 %></td>
-    <td><%= event.value2 %></td>
-    <td><%= event.value3 %></td>
-    <td><%= link_to 'Show', event %></td>
+    <td><%= link_to 'Show', event_path %></td>
     <td><%= link_to 'Edit', edit_event_path(event) %></td>
     <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>

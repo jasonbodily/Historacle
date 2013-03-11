@@ -13,7 +13,7 @@ class LibrariesController < ApplicationController
   end
 
   # GET /libraries/1
-  # GET /libraries/1.json
+  # GET /   libraries/1.json
   def show
 
     @library = current_user.library || Library.create(user_id: current_user.id)

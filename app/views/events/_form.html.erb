@@ -1,5 +1,5 @@
 <%= simple_form_for([@chronicle, @event], html: {class: 'form-horizontal'}) do |f| %>
-
+   <%= f.error_notification %>
    <%= f.input :title %>
    <%= f.input :date %>
 
@@ -21,10 +21,13 @@
    <%= f.input :longitude %>
    <%= f.input :latitude %>
    <%= f.input :location, label: "Location Title" %>
-   <%= f.input :description, input_html: {rows: 3 }%>
-   <%= f.input :value1 %>
-   <%= f.input :value2 %>
-   <%= f.input :value3 %>
+   <%= f.input :description, input_html: {rows: 3} %>
+
+   <%= f.fields_for :properties, OpenStruct.new(@event.properties) do |builder| %>
+      <% @event.chronicle.fields.each do |field| %>
+         <%= render "chronicles/fields/#{field.field_type}", field: field, f: builder %>
+      <% end %>
+   <% end %>
 
    <div class="actions">
      <%= f.submit %>

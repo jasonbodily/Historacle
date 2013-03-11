@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="span3">
+
+  </div>
+  <div id="map-cell" class="span9">
+    <script>
+
+       var po = org.polymaps;
+
+       var map = po.map()
+          .container(document.getElementById("map-cell").appendChild(po.svg("svg")))
+          .center({lat:40, lon:0})
+          .zoomRange([2, 6])
+          .zoom(3)
+          .add(po.interact());
+
+       map.add(po.image()
+          .url("http://s3.amazonaws.com/com.modestmaps.bluemarble/{Z}-r{Y}-c{X}.jpg"));
+
+       map.add(po.geoJson()
+          .url("/world.json")
+          .tile(false)
+          .zoom(3)
+          .on("load", load));
+
+       map.add(po.compass()
+          .pan("none"));
+
+       map.container().setAttribute("class", "YlOrRd");
+
+    </script>
+  </div>
+</div>

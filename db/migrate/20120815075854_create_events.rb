@@ -8,9 +8,7 @@ class CreateEvents < ActiveRecord::Migration
       t.decimal :longitude
       t.decimal :latitude
       t.text :description
-      t.string :value1
-      t.string :value2
-      t.string :value3
+      t.text :properties
 
       t.timestamps
     end

@@ -1,10 +1,10 @@
 class ChroniclesController < ApplicationController
-  #before_filter :authenticate_user!
+  before_filter :authenticate_user!
 
   # GET /chronicles
   # GET /chronicles.json
   def index
-    @chronicles = Chronicle.all
+    @chronicles = current_user.library.chronicles
 
     respond_to do |format|
       format.html # index.html.erb

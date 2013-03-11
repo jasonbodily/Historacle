@@ -1,40 +1,21 @@
-<%= simple_form_for([@library,@chronicle], :html => {:class => 'form-horizontal'}) do |f| %>
+<%= simple_form_for([@library, @chronicle], :html => {:class => 'form-horizontal'}) do |f| %>
 
    <%= f.input :name %>
-   <%= f.input :description, :input_html => {   :rows => 3 } %>
+   <%= f.input :description, :input_html => {:rows => 3} %>
    <%= f.input :subject %>
 
-    <div class="control-group">
-      <label class="control-label">Extra Attribute</label>
-      <div class="controls">
-        <%= f.check_box :use_value1, style: "display: none"%>
-        <%= f.text_field :value1_title, placeholder: "Attribute Title" %>
-      </div>
-    </div>
+   <%= f.fields_for :fields do |builder| %>
+      <%= render 'field_fields', f: builder %>
+   <% end %>
+   <%= link_to_add_fields "Add Field", f, :fields %>
 
-    <div class="control-group">
-      <label class="control-label">Extra Attribute</label>
-      <div class="controls">
-        <%= f.check_box :use_value2, style: "display: none" %>
-        <%= f.text_field :value2_title, placeholder: "Attribute Title" %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <label class="control-label">Extra Attribute</label>
-      <div class="controls">
-        <%= f.check_box :use_value3, style: "display: none" %>
-        <%= f.text_field :value3_title, placeholder: "Attribute Title" %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <div class="controls">
-        <div class="actions">
-          <%= f.submit class: "btn" %>
-        </div>
-      </div>
-    </div>
+   <div class="control-group">
+     <div class="controls">
+       <div class="actions">
+         <%= f.submit class: "btn" %>
+       </div>
+     </div>
+   </div>
 
 
 <% end %>

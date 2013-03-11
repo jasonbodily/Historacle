@@ -1,0 +1,13 @@
+<fieldset>
+  <div class="control-group">
+    <div class="controls">
+      <%= f.select :field_type, %w[text_field check_box] %>
+      <%= f.text_field :name, placeholder: "Field Name" %>
+      <%= f.check_box :required %> <br>
+      <%= f.label :required, class:"help-inline" %>
+      <%= f.hidden_field :_destroy, class: "pull-right" %>
+      <%= link_to "[remove]", '#', class: "remove_fields" %>
+    </div>
+  </div>
+
+</fieldset>

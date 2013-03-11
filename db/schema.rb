@@ -11,21 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120823045713) do
+ActiveRecord::Schema.define(:version => 20130228060124) do
+
+  create_table "chronicle_fields", :force => true do |t|
+    t.string   "name"
+    t.string   "field_type"
+    t.boolean  "required"
+    t.integer  "chronicle_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "chronicle_fields", ["chronicle_id"], :name => "index_chronicle_fields_on_chronicle_id"
 
   create_table "chronicles", :force => true do |t|
     t.integer  "library_id"
     t.string   "name"
     t.text     "description"
     t.string   "subject"
-    t.string   "value1_title"
-    t.boolean  "use_value1"
-    t.string   "value2_title"
-    t.boolean  "use_value2"
-    t.string   "value3_title"
-    t.boolean  "use_value3"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "events", :force => true do |t|
@@ -36,9 +41,7 @@ ActiveRecord::Schema.define(:version => 20120823045713) do
     t.decimal  "longitude"
     t.decimal  "latitude"
     t.text     "description"
-    t.string   "value1"
-    t.string   "value2"
-    t.string   "value3"
+    t.text     "properties"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end

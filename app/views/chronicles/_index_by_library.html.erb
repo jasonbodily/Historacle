@@ -14,8 +14,8 @@
     <td><%= chronicle.name %></td>
     <td><%= chronicle.description %></td>
     <td><%= chronicle.subject %></td>
-    <td><%= link_to 'Show', library_chronicle_path(chronicle, @library) %></td>
-    <td><%= link_to 'Edit', edit_library_chronicle_path(chronicle, @library) %></td>
+    <td><%= link_to 'Show', library_chronicle_path(@library, chronicle) %></td>
+    <td><%= link_to 'Edit', edit_library_chronicle_path(@library, chronicle) %></td>
     <td><%= link_to 'Destroy', chronicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>

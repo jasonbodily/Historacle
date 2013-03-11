@@ -30,21 +30,5 @@
   <%= @event.description %>
 </p>
 
-<p>
-  <b>Value1:</b>
-  <%= @event.value1 %>
-</p>
-
-<p>
-  <b>Value2:</b>
-  <%= @event.value2 %>
-</p>
-
-<p>
-  <b>Value3:</b>
-  <%= @event.value3 %>
-</p>
-
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= link_to 'Edit', edit_chronicle_event_path(@event) %> |
+<%= link_to 'Back', chronicle_events_path %>

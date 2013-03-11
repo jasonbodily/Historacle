@@ -1,5 +1,7 @@
 class Chronicle < ActiveRecord::Base
-  attr_accessible :description, :name, :subject, :use_value1, :use_value2, :use_value3, :value1_title, :value2_title, :value3_title
+  attr_accessible :description, :name, :subject, :fields_attributes
   has_many :events, :dependent => :destroy
+  has_many :fields, class_name: "ChronicleField"
+  accepts_nested_attributes_for :fields, allow_destroy: true
   belongs_to :library
 end

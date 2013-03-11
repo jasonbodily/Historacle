@@ -1,5 +1,7 @@
 Historacle::Application.routes.draw do
 
+  get "look/index"
+
   get "homebase/index"
 
   resources :events
