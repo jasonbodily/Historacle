@@ -14,3 +14,19 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+
+//Initial load of page
+$(document).ready(sizeContent);
+
+//Every resize of window
+$(window).resize(sizeContent);
+
+//Dynamically assign height
+function sizeContent() {
+   var newHeight = $(window).height();
+   var newWidth = $(window).width();
+   var rightWidth = $('#viewer-wrapper').width();
+   var leftWidth = newWidth - rightWidth;
+//   $("#map").css("height", newHeight - 40 );
+//   $("#timeline-wrapper").css("width", leftWidth);
+}

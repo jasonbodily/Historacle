@@ -1,6 +1,8 @@
 Historacle::Application.routes.draw do
 
   get "look/index"
+  get "look/index2"
+  get "look/index3"
 
   get "homebase/index"
 

@@ -1,53 +1,54 @@
-(function(_) {
+(function(root_window) {
 
-   function create(n) {
-      if (/^#/.test(n)) return document.getElementById(n.substring(1));
-      n = qualify(n);
-      return n.space == null
-         ? document.createElement(n.local)
-         : document.createElementNS(n.space, n.local);
+   function create(element_id) {
+      //if expression starts with # then return the corresponding element (substring removes first char)
+      if (/^#/.test(element_id)) return document.getElementById(element_id.substring(1));
+      element_id = qualify(element_id);
+      return element_id.space == null
+         ? document.createElement(element_id.local)
+         : document.createElementNS(element_id.space, element_id.local);
    }
 
-   function qualify(n) {
-      var i = n.indexOf(":");
+   function qualify(element_id) {
+      var i = element_id.indexOf(":");
       return {
-         space: n$.prefix[n.substring(0, i)],
-         local: n.substring(i + 1)
+         space: createJElement.prefix[element_id.substring(0, i)],
+         local: element_id.substring(i + 1)
       };
    }
 
-   function N$(e) {
-      this.element = e;
+   function jElement(elemnt) {
+      this.element = elemnt;
    }
 
-   N$.prototype = {
+   jElement.prototype = {
 
       add: function(c, s) {
-         return n$(this.element.insertBefore(
-            typeof c == "string" ? create(c) : $n(c),
-            arguments.length == 1 ? null : $n(s)));
+         return createJElement(this.element.insertBefore(
+            typeof c == "string" ? create(c) : getJElement(c),
+            arguments.length == 1 ? null : getJElement(s)));
       },
 
       remove: function(c) {
-         this.element.removeChild($n(c));
+         this.element.removeChild(getJElement(c));
          return this;
       },
 
       parent: function() {
-         return n$(this.element.parentNode);
+         return createJElement(this.element.parentNode);
       },
 
       child: function(i) {
          var children = this.element.childNodes;
-         return n$(children[i < 0 ? children.length - i - 1 : i]);
+         return createJElement(children[i < 0 ? children.length - i - 1 : i]);
       },
 
       previous: function() {
-         return n$(this.element.previousSibling);
+         return createJElement(this.element.previousSibling);
       },
 
       next: function() {
-         return n$(this.element.nextSibling);
+         return createJElement(this.element.nextSibling);
       },
 
       attr: function(n, v) {
@@ -95,23 +96,23 @@
       }
    }
 
-   function n$(e) {
-      return e == null || e.element ? e : new N$(typeof e == "string" ? create(e) : e);
+   function createJElement(jelement) {
+      return jelement == null || jelement.element ? jelement : new jElement(typeof jelement == "string" ? create(jelement) : jelement);
    }
 
-   function $n(o) {
-      return o && o.element || o;
+   function getJElement(je) {
+      return je && je.element || je;
    }
 
-   n$.prefix = {
+   createJElement.prefix = {
       svg: "http://www.w3.org/2000/svg",
       xlink: "http://www.w3.org/1999/xlink",
       xml: "http://www.w3.org/XML/1998/namespace",
       xmlns: "http://www.w3.org/2000/xmlns/"
    };
 
-   n$.version = "1.1.0";
+   createJElement.version = "1.1.0";
 
-   _.n$ = n$;
-   _.$n = $n;
+   root_window.createJElement = createJElement;
+   root_window.getJElement = getJElement;
 })(this);

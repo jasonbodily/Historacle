@@ -8,28 +8,16 @@
   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
 </head>
-<body>
+
+<body id="historacle-viewer">
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
-    <div class="container">
+    <div class="container-slim">
       <%= render "layouts/navbar-inner" %>
     </div>
   </div>
 </div>
-
-<!-- Notifications -->
-<% flash.each do |name, msg| %>
-   <div class="alert alert-"<%= name == :notice ? "success" : "error" %>">
-   <a class="close" data-dismiss="alert">&times;</a>
-   <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
-   </div>
-<% end %>
-<!-- End Notifications -->
-
-<div class="container">
-  <%= yield %>
-</div>
-
-
+<%= yield %>
 </body>
+
 </html>
