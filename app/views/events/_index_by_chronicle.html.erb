@@ -1,25 +1,41 @@
-<h1>Listing events</h1>
+<div class="row">
 
-<table class="table table-striped">
-  <tr>
-    <th>Title</th>
-    <th>Date</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <div class="span6">
+    <%= will_paginate @events, next_label: '<i class="icon-arrow-right"></i>', previous_label: '<i class="icon-arrow-left" ></i>' %>
+    <table id="index-chronicle-events" class="table table-index table-striped table-hover">
+      <tr>
+        <th><%= sortable "title", "Title" %></th>
+        <th><%= sortable "start_date", "Date" %></th>
+        <th></th>
+      </tr>
 
-<% @chronicle.events.each do |event| %>
-  <tr>
-    <td><%= event.title %></td>
-    <td><%= event.date %></td>
-    <td><%= link_to 'Show', event_path(event) %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+      <% @events.each do |event| %>
+         <tr data-link="<%= chronicle_event_path(@chronicle, event) %>">
+           <td><%= event.title %></td>
+           <td><%= event.start_date.strftime('%b %d, %Y') %></td>
+           <td><%= link_to 'Destroy', chronicle_event_path(@chronicle, event), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+         </tr>
+      <% end %>
+    </table>
+
+  </div>
+
+  <div class="span6">
+    <div id="feature-event">
+
+    </div>
+  </div>
+</div>
+
+
+<br/>
+
+<%= link_to 'New Event', new_chronicle_event_path(@chronicle, Event.new) %>
+
+
+<h2>Import</h2>
+
+<%= form_tag import_chronicle_events_path(@chronicle), multipart: true do  %>
+   <%=  file_field_tag :file %>
+   <%=  submit_tag "Import" %>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Event', new_chronicle_event_path(@chronicle) %>

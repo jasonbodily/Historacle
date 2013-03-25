@@ -16,6 +16,7 @@ class ChroniclesController < ApplicationController
   # GET /chronicles/1.json
   def show
     @chronicle = Chronicle.find(params[:id])
+    @events =  @chronicle.events.order(sort_column + " " + sort_direction).paginate(:per_page =>10, :page => params[:page])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -26,7 +27,7 @@ class ChroniclesController < ApplicationController
   # GET /chronicles/new
   # GET /chronicles/new.json
   def new
-    @library = Library.find params[:library_id]
+    @library = current_user.library
     @chronicle = @library.chronicles.build
 
     respond_to do |format|
@@ -43,7 +44,7 @@ class ChroniclesController < ApplicationController
   # POST /chronicles
   # POST /chronicles.json
   def create
-    @library = Library.find params[:library_id]
+    @library = current_user.library
     @chronicle = @library.chronicles.build(params[:chronicle])
 
     respond_to do |format|
@@ -84,4 +85,17 @@ class ChroniclesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  #Railscasts 228
+  helper_method :sort_column, :sort_direction
+  private
+
+  def sort_column
+    (Event.column_names.include?(params[:sort])) ? params[:sort] : "start_date"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end
+
 end

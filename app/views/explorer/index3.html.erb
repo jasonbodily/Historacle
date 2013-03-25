@@ -17,57 +17,6 @@
 
 </div>
 
-<style type="text/css">
-   .dashboard {
-      position: absolute;
-      top: 40px;
-      right:0;
-      left:0;
-      bottom:0;
-      background: #9eb0c1;
-      min-height: 600px;
-      min-width: 1250px;
-   }
-
-   .dashboard > div[id$=wrapper] > div {
-      height: 100%;
-      border-radius: 5px;
-      box-shadow: 0px 4px 10px -5px #000000;
-      background-color: rgba(6, 6, 6, 0.70);
-      filter: progid:DXImageTransform.Microsoft.Gradient(GradientType = 0, StartColorStr = '#000000', EndColorStr = '#000000');
-   }
-
-   #timeline-wrapper {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      margin: 20px;
-      height: 120px;
-      width: 65%;
-   }
-
-   #timeline {
-      height: 100%;
-      width: 100%;
-   }
-
-   #viewer-wrapper {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      margin: 20px;
-      width: 380px;
-   }
-
-   #viewer {
-      height: 100%;
-      width: 100%;
-   }
-
-</style>
-
-
 
 <%#= Event.first.to_json.html_safe %>
 <script type="text/javascript">
@@ -78,27 +27,29 @@
 
    var map = po.map()
       .container(getJElement(svg))
-      .center({lat:37.787, lon:-122.228})
+      .center({lat:0, lon:0})
       .zoomRange([2, 6])
-      .zoom(12)
+      .zoom(3)
       .add(po.interact());
-
-   map.add(po.image()
-      .url(po.url("http://{S}tile.cloudmade.com"
-      + "/1a1b06b230af4efdbb989ea99e9841af" // http://cloudmade.com/register
-      + "/998/256/{Z}/{X}/{Y}.png")
-      .hosts(["a.", "b.", "c.", ""])));
 
    //   map.add(po.image()
    //      .url("http://s3.amazonaws.com/com.modestmaps.bluemarble/{Z}-r{Y}-c{X}.jpg"));
 
+   map.add(po.image()
+      .url("http://s3.amazonaws.com/com.modestmaps.bluemarble/{Z}-r{Y}-c{X}.jpg"));
+
    map.add(po.geoJson()
-      .features([
-      {geometry:{coordinates:[-122.258, 37.805], type:"Point"}}
-   ])
+      .url("world2.json")
+      .tile(false)
+      .zoom(3)
+      .on("load", load));
+//   map.add(po.geoJson()
+//      .features([
+//      {geometry:{coordinates:[-122.258, 37.805], type:"Point"}}
+//   ])
 //      .url("world2.json")
 //      .pan("none")
-      .on("load", load));
+//      .on("load", load));
 
    map.add(po.compass()
       .pan("none"));
@@ -165,7 +116,7 @@
             .attr("fill", "url(#r2)")
             .attr("r", r);
       }
-
+      console.log("loaded")
    }
 
 </script>

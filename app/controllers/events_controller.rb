@@ -19,6 +19,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
+      format.js { render :show }
       format.json { render json: @event }
     end
   end
@@ -37,6 +38,7 @@ class EventsController < ApplicationController
 
   # GET /events/1/edit
   def edit
+    @chronicle = Chronicle.find(params[:chronicle_id])
     @event = Event.find(params[:id])
   end
 
@@ -48,7 +50,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.html { redirect_to [@chronicle, @event], notice: 'Event was successfully created.' }
         format.json { render json: @event, status: :created, location: @event }
       else
         format.html { render action: "new" }
@@ -60,11 +62,12 @@ class EventsController < ApplicationController
   # PUT /events/1
   # PUT /events/1.json
   def update
+    @chronicle = Chronicle.find(params[:chronicle_id])
     @event = Event.find(params[:id])
 
     respond_to do |format|
       if @event.update_attributes(params[:event])
-        format.html { redirect_to @event, notice: 'Event was successfully updated.' }
+        format.html { redirect_to [@chronicle, @event], notice: 'Event was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -76,12 +79,20 @@ class EventsController < ApplicationController
   # DELETE /events/1
   # DELETE /events/1.json
   def destroy
+    @chronicle = Chronicle.find(params[:chronicle_id])
     @event = Event.find(params[:id])
     @event.destroy
 
     respond_to do |format|
-      format.html { redirect_to events_url }
+      format.html { redirect_to chronicle_path(@chronicle) }
       format.json { head :no_content }
     end
   end
+
+  def import
+    @chronicle = Chronicle.find(params[:chronicle_id])
+    Event.import(params[:file], @chronicle)
+    redirect_to @chronicle, notice: "Events Imported"
+  end
+
 end

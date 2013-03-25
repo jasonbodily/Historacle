@@ -1,28 +1,37 @@
 Historacle::Application.routes.draw do
 
-  get "look/index"
-  get "look/index2"
-  get "look/index3"
+  match "/explorer" => "explorer#index2"
+  get "explorer/index"
+  get "explorer/index2"
+  get "explorer/index3"
+  get "explorer/leaflet"
 
   get "homebase/index"
 
-  resources :events
+  resources :libraries, as: 'library', :only => [:edit, :show, :update]
 
-  resources :chronicles do
-    resources :events
+  scope "/library" do
+    resources :chronicles do
+      resources :events  do
+        collection { post :import }
+      end
+    end
   end
+  #namespace :library do
+  #  resources :chronicles do
+  #    resources :events
+  #  end
+  #end
 
-  resources :libraries do
-    resources :chronicles
-  end
-
-  devise_for :users do
-    resource :library
-  end
+  #resources :libraries, as: "library" do
+  #  resources :chronicles
+  #end
 
   authenticated :user do
     root to: "libraries#show"
   end
+
+  devise_for :users
 
   root :to => "homebase#index"
 

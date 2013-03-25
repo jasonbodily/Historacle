@@ -1,14 +1,17 @@
+
 <%= simple_form_for([@chronicle, @event], html: {class: 'form-horizontal'}) do |f| %>
    <%= f.error_notification %>
    <%= f.input :title %>
-   <%= f.input :date %>
+   <%= f.input :start_date, start_year: 1800, end_year: 2100, :include_blank => true %>
+   <%= f.input :end_date, start_year: 1800, end_year: 2100, :include_blank => true %>
 
    <div class="control-group string">
      <label class="control-label"></label>
-
      <div class="controls">
-       <input class="string geocode-input" id="event_title" size="50" type="text" value="">
-       <span class="help-inline"><a href="#" class="btn submit-geocode">Set Location Info</a></span>
+       <div class="input-append">
+         <input class="string geocode-input span2" id="appendedInputButton" type="text">
+         <button class="btn submit-geocode" type="button"><i class="icon-search"></i></button>
+       </div>
      </div>
    </div>
 
@@ -22,6 +25,7 @@
    <%= f.input :latitude %>
    <%= f.input :location, label: "Location Title" %>
    <%= f.input :description, input_html: {rows: 3} %>
+   <%= f.input :image_url %>
 
    <%= f.fields_for :properties, OpenStruct.new(@event.properties) do |builder| %>
       <% @event.chronicle.fields.each do |field| %>

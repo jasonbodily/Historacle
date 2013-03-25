@@ -1,0 +1,33 @@
+// Place all the styles related to the events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.event-map img {
+  position: absolute;
+  margin-left: 400px;
+}
+
+#new_event select[id$="date_1i"] {
+  width: 65px;
+}
+
+#new_event select[id$="date_2i"] {
+  float: left;
+  width: 105px;
+}
+
+#new_event select[id$="date_3i"] {
+  float: left;
+  width: 50px;
+}
+
+#new_event select[id$="date_4i"] {
+  width: 50px;
+}
+
+#new_event select[id$="date_5i"] {
+  width: 50px;
+}
+
+#feature-event img {
+  max-height: 300px;
+}

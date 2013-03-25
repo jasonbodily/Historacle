@@ -1,4 +1,4 @@
 require 'test_helper'
 
-class LookHelperTest < ActionView::TestCase
+class ExplorerHelperTest < ActionView::TestCase
 end

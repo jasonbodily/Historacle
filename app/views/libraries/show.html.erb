@@ -1,5 +1,6 @@
+
 <h1><%= @library.name || "My Library"%></h1>
 <%= render 'chronicles/index_by_library' %>
 
 <%= link_to 'Edit', edit_library_path(@library) %> |
-<%= link_to 'Back', libraries_path %>
+<%= link_to 'Back', library_path(@library) %>

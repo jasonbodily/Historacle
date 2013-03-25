@@ -1,3 +1,58 @@
+$border_margin: 20px;
+$right_margin: 380px;
+
+#map {
+  width:100%;
+  height:100%;
+}
+
+.dashboard {
+  position: absolute;
+  top: 40px;
+  right:0;
+  left:0;
+  bottom:0;
+  background: #9eb0c1;
+  min-height: 600px;
+  min-width: 1250px;
+}
+
+.dashboard > div[id$=wrapper] > div {
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px -5px #000000;
+  background-color: rgba(6, 6, 6, 0.70);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType = 0, StartColorStr = '#000000', EndColorStr = '#000000');
+}
+
+#timeline-wrapper {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: $right_margin + $border_margin;
+  margin: $border_margin;
+  height: 120px;
+}
+
+#timeline {
+  height: 100%;
+  width: 100%;
+}
+
+#viewer-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 20px;
+  width: $right_margin;
+}
+
+#viewer {
+  height: 100%;
+  width: 100%;
+}
+
 #historacle-viewer {
     height:100%;
     width:100%;
@@ -9,12 +64,6 @@
 .container-slim {
     padding: 0 20px;
 }
-
-
-
-
-
-
 
 svg {
     display: block;

@@ -1,5 +1,7 @@
-class LookController < ApplicationController
+class ExplorerController < ApplicationController
+
   layout "viewer"
+
   def index
   end
 
@@ -9,4 +11,5 @@ class LookController < ApplicationController
   def index3
 
   end
+
 end

@@ -16,17 +16,14 @@
 //= require_tree .
 
 //Initial load of page
-$(document).ready(sizeContent);
+$(function() {
+   $("#index-chronicle-events tr[data-link]").click(function() {
+      $.getScript(this.dataset.link);
+   });
 
-//Every resize of window
-$(window).resize(sizeContent);
+   $("#index-library-chronicles tr[data-link]").click(function() {
+      window.location = this.dataset.link;
+   });
+});
 
-//Dynamically assign height
-function sizeContent() {
-   var newHeight = $(window).height();
-   var newWidth = $(window).width();
-   var rightWidth = $('#viewer-wrapper').width();
-   var leftWidth = newWidth - rightWidth;
-//   $("#map").css("height", newHeight - 40 );
-//   $("#timeline-wrapper").css("width", leftWidth);
-}
+

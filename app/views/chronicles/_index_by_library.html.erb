@@ -1,24 +1,22 @@
 <h4>Chronicles</h4>
-<table class="table table-striped">
+<table id="index-library-chronicles" class="table table-index table-striped table-hover">
   <tr>
     <th>Name</th>
     <th>Description</th>
-    <th>Subject</th>
-    <th></th>
+    <th>Tags</th>
     <th></th>
     <th></th>
   </tr>
 
-<% @library.chronicles.each do |chronicle| %>
-  <tr>
-    <td><%= chronicle.name %></td>
-    <td><%= chronicle.description %></td>
-    <td><%= chronicle.subject %></td>
-    <td><%= link_to 'Show', library_chronicle_path(@library, chronicle) %></td>
-    <td><%= link_to 'Edit', edit_library_chronicle_path(@library, chronicle) %></td>
-    <td><%= link_to 'Destroy', chronicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+  <% @library.chronicles.each do |chronicle| %>
+     <tr data-link="<%= chronicle_path(chronicle) %>">
+       <td><%= chronicle.name %></td>
+       <td><%= chronicle.description %></td>
+       <td><%= chronicle.subject %></td>
+       <td><%= link_to 'Edit', edit_chronicle_path(chronicle) %></td>
+       <td><%= link_to 'Destroy', chronicle, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+     </tr>
+  <% end %>
 </table>
 
-<%= link_to 'New Chronicle', new_library_chronicle_path(@library) %>
+<%= link_to 'New Chronicle', new_chronicle_path %>
