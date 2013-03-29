@@ -6,6 +6,46 @@
   <div id="viewer-wrapper">
     <div id="viewer">
 
+      <ul id="viewer-header" class="nav nav-tabs" id="myTab">
+        <li class="active"><a href="#events-tab" data-toggle="tab">Events</a></li>
+        <li><a href="#areas-tab" data-toggle="tab">Areas</a></li>
+        <li><a href="#settings-tab" data-toggle="tab">Settings</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="events-tab">
+          <div id="events-view" class="carousel slide">
+
+            <div>
+              <a class="viewer-arrow left" href="#events-view" data-slide="prev"><i class="icon-chevron-left"></i></a>
+              <a class="viewer-arrow right" href="#events-view" data-slide="next"><i class="icon-chevron-right"></i></a>
+            </div>
+
+            <% events = Event.all %>
+
+            <!-- Carousel nav -->
+            <div class="carousel-indicator-container">
+              <ol class="carousel-indicators">
+                <% events.each_with_index do |event, index| %>
+                   <li data-target="#events-view" data-slide-to="<%= index %>" class="<%= index == 0 ? "active": "" %>"></li>
+                <% end %>
+              </ol>
+            </div>
+
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              <% events.each do |event, index| %>
+                 <div class="<%= index == 0 ? "active": "" %> item"><%= render "events/event", event: event %></div>
+              <% end %>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="tab-pane" id="areas-tab">Areas</div>
+        <div class="tab-pane" id="settings-tab">Settings</div>
+      </div>
+
     </div>
   </div>
 
@@ -15,71 +55,83 @@
     </div>
   </div>
 
+  <style type="text/css">
+     .carousel-control-container {
+        height: 60px;
+     }
+
+     .carousel-indicator-container {
+        height: 40px;
+     }
+
+     .carousel-inner .item {
+        height: 400px;
+     }
+
+  </style>
 </div>
 
-
-<%#= Event.first.to_json.html_safe %>
 <script type="text/javascript">
+   $(function () {
+      $('#events-view').carousel('pause');
+//      var map = L.map('map').setView([51.505, -0.09], 3);
+//     L.tileLayer('http://{s}.tile.cloudmade.com/06b9e7be60cf41f290a310df8248d1dd/90649/256/{z}/{x}/{y}.png', {
+//         zoom: 6,
+//         maxZoom: 10
+//      }).addTo(map);
 
-   var po = org.polymaps;
+      var greenIcon = L.icon({
+         iconUrl:'<%= root_url%>images/pin-green.png',
+//      shadowUrl: 'leaf-shadow.png',
+         iconSize:[32, 32], // size of the icon
+         iconAnchor:[16, 32], // point of the icon which will correspond to marker's location
+         popupAnchor:[-0, -30] // point from which the popup should open relative to the iconAnchor
+      });
 
-   /* Country name -> population (July 2010 Est.). */
-   var population = tsv("/population.tsv")
-      .key(function (l) {
-         return l[1];
-      })
-      .value(function (l) {
-         return l[2].replace(/,/g, "");
-      })
-      .map();
+      var blueIcon = L.icon({
+         iconUrl:'<%= root_url%>images/pin-blue.png',
+//      shadowUrl: 'leaf-shadow.png',
+         iconSize:[32, 32], // size of the icon
+         iconAnchor:[16, 32], // point of the icon which will correspond to marker's location
+         popupAnchor:[-0, -30] // point from which the popup should open relative to the iconAnchor
+      });
 
-   /* Country name -> internet users (2008). */
-   var internet = tsv("/internet.tsv")
-      .key(function (l) {
-         return l[1];
-      })
-      .value(function (l) {
-         return l[2].replace(/,/g, "");
-      })
-      .map();
+//
+      var littleton = L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.'),
+         denver = L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.'),
+         aurora = L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.'),
+         golden = L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.');
 
-   var map = po.map()
-      .container(document.getElementById("map").appendChild(po.svg("svg")))
-      .center({lat:40, lon:0})
-      .zoomRange([2, 6])
-      .zoom(3)
-      .add(po.interact());
+      var cities = L.layerGroup([littleton, denver, aurora, golden]);
+      var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/06b9e7be60cf41f290a310df8248d1dd/{styleId}/256/{z}/{x}/{y}.png',
+         cloudmadeAttribution = '';
 
-   map.add(po.image()
-      .url("http://s3.amazonaws.com/com.modestmaps.bluemarble/{Z}-r{Y}-c{X}.jpg"));
+      var minimal = L.tileLayer(cloudmadeUrl, {styleId:22677, attribution:cloudmadeAttribution}),
+         midnight = L.tileLayer(cloudmadeUrl, {styleId:999, attribution:cloudmadeAttribution}),
+         motorways = L.tileLayer(cloudmadeUrl, {styleId:46561, attribution:cloudmadeAttribution});
 
-   map.add(po.geoJson()
-      .url("world3.json")
-      .tile(false)
-      .zoom(3)
-      .on("load", load));
+      var map = L.map('map', {
+         center:new L.LatLng(44.078156, -123.054494),
+         zoom:3,
+         layers:[minimal, motorways, cities]
+      });
+      var baseMaps = {
+         "Minimal":minimal,
+         "Night View":midnight
+      };
 
-   map.add(po.compass()
-      .pan("none"));
+      var overlayMaps = {
+         "Motorways":motorways,
+         "Cities":cities
+      };
+//      L.control.layers(baseMaps, overlayMaps).addTo(map);
 
-   map.container().setAttribute("class", "YlOrRd");
+      L.marker([51.5, -0.09], {icon:greenIcon, title:"ThebigCheese"}).addTo(map);
+      L.marker([50.5, -3.19], {icon:blueIcon, title:"ThesmallCheese"}).addTo(map);
+      L.marker([44.078156, -123.054494], {icon:blueIcon, title:"Eugene Oregon"}).addTo(map);
 
-   /** Set feature class and add tooltip on tile load. */
-   function load(e) {
-      for (var i = 0; i < e.features.length; i++) {
-         var feature = e.features[i],
-            n = feature.data.properties.name,
-            v = internet[n] / population[n];
-         createJElement(feature.element)
-            .attr("class", isNaN(v) ? null : "q" + ~~(v * 9) + "-" + 9)
-            .add("svg:title")
-            .text(n + (isNaN(v) ? "" : ":  " + percent(v)));
-      }
-   }
+   })
 
-   /** Formats a given number as a percentage, e.g., 10% or 0.02%. */
-   function percent(v) {
-      return (v * 100).toPrecision(Math.min(2, 2 - Math.log(v) / Math.LN2)) + "%";
-   }
 
 </script>
+

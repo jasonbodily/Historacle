@@ -1,10 +1,10 @@
 Historacle::Application.routes.draw do
 
-  match "/explorer" => "explorer#index2"
+  match "/explorer" => "explorer#index"
   get "explorer/index"
+  get "explorer/index1"
   get "explorer/index2"
   get "explorer/index3"
-  get "explorer/leaflet"
 
   get "homebase/index"
 

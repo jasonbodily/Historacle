@@ -1,0 +1,24 @@
+
+<fieldset>
+
+  <% if event.image_url %>
+     <img src="<%= event.image_url %>" alt="">
+  <% end %>
+
+  <blockquote>
+    <p><%= event.title %></p>
+    <small><%= event.location %></small>
+    <small><%= event.start_date %></small>
+  </blockquote>
+
+
+  <p><%= event.description %></p>
+
+  <% event.properties.each do |name, value| %>
+     <% unless value.to_s == "" %>
+        <div><b><%= name %></b></div>
+        <div class="inline-help"><%= value %></div>
+     <% end %>
+  <% end %>
+
+</fieldset>
