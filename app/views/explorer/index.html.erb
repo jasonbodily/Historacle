@@ -5,18 +5,19 @@
 
   <div id="viewer-wrapper">
     <div id="viewer">
+      <div id="viewer-header">
+        <ul class="nav nav-tabs" id="myTab">
+          <li class="active"><a href="#events-pane" data-toggle="tab">Events</a></li>
+          <li><a href="#areas-tab" data-toggle="tab">Areas</a></li>
+          <li><a href="#settings-tab" data-toggle="tab">Settings</a></li>
+        </ul>
+      </div>
 
-      <ul id="viewer-header" class="nav nav-tabs" id="myTab">
-        <li class="active"><a href="#events-tab" data-toggle="tab">Events</a></li>
-        <li><a href="#areas-tab" data-toggle="tab">Areas</a></li>
-        <li><a href="#settings-tab" data-toggle="tab">Settings</a></li>
-      </ul>
-
-      <div class="tab-content">
-        <div class="tab-pane active" id="events-tab">
+      <div id="viewer-content" class="tab-content">
+        <div id="events-pane" class="tab-pane active">
           <div id="events-view" class="carousel slide">
 
-            <div>
+            <div id="events-view-arrows">
               <a class="viewer-arrow left" href="#events-view" data-slide="prev"><i class="icon-chevron-left"></i></a>
               <a class="viewer-arrow right" href="#events-view" data-slide="next"><i class="icon-chevron-right"></i></a>
             </div>
@@ -24,21 +25,20 @@
             <% events = Event.all %>
 
             <!-- Carousel nav -->
-            <div class="carousel-indicator-container">
+            <div id="events-view-indicators" >
               <ol class="carousel-indicators">
-                <% events.each_with_index do |event, index| %>
+                <% events.each_with_index do |a, index| %>
                    <li data-target="#events-view" data-slide-to="<%= index %>" class="<%= index == 0 ? "active": "" %>"></li>
                 <% end %>
               </ol>
             </div>
 
             <!-- Carousel items -->
-            <div class="carousel-inner">
-              <% events.each do |event, index| %>
-                 <div class="<%= index == 0 ? "active": "" %> item"><%= render "events/event", event: event %></div>
+            <div id="events-view-carousel" class="carousel-inner">
+              <% events.each_with_index do |event, index| %>
+                 <div class="<%= index == 0 ? "active": "" %> item event-item"><%= render "events/event", event: event %></div>
               <% end %>
             </div>
-
 
           </div>
         </div>

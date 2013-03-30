@@ -1,18 +1,14 @@
 
 <fieldset>
+  <p class="event-date"><%= event.start_date.strftime("%B %d, %Y") %></p>
+  <p class="event-location"><%= event.location %></p>
+  <p class="event-title"><%= event.title %></p>
 
   <% if event.image_url %>
      <img src="<%= event.image_url %>" alt="">
   <% end %>
 
-  <blockquote>
-    <p><%= event.title %></p>
-    <small><%= event.location %></small>
-    <small><%= event.start_date %></small>
-  </blockquote>
-
-
-  <p><%= event.description %></p>
+  <p class="event-description"><%= event.description %></p>
 
   <% event.properties.each do |name, value| %>
      <% unless value.to_s == "" %>

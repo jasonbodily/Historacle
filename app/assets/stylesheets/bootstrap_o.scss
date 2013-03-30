@@ -7,7 +7,6 @@ a:hover {
   text-decoration: none;
 }
 
-
 body {
   margin-top: 60px;
   font-family: "Raleway", Sans-Serif;
@@ -34,10 +33,8 @@ body {
 }
 
 #viewer-header {
-  text-align: center;
-  list-style-type: none;
   box-shadow: inset 2px 2px 0 0 rgba(255, 255, 255, 0.3);
-  -webkit-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
   background-color: #2d2d2d;
   background-image: -moz-linear-gradient(top, #484848, #2d2d2d);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#484848), to(#2d2d2d));
@@ -48,22 +45,24 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#484848', endColorstr = '#2d2d2d', GradientType = 0);
 }
 
-#viewer-header {
+#viewer-header > ul {
+  text-align: center;
+  list-style-type: none;
   border-bottom: none;
   margin: 0;
 }
 
-#viewer-header > li {
+#viewer-header > ul > li {
   display: inline;
   margin-bottom: -1px;
   max-width: 100px;
 }
 
-#viewer-header > li:first-child {
+#viewer-header > ul > li:first-child {
   margin-left: 82px;
 }
 
-#viewer-header > li > a {
+#viewer-header > ul > li > a {
   color: #777777;
   padding: 8px 12px;
   margin-right: 2px;
@@ -73,30 +72,26 @@ body {
   -moz-border-radius: none;
 }
 
-
-#viewer-header > li > a:hover,
-#viewer-header > li > a:focus {
+#viewer-header > ul > li > a:hover,
+#viewer-header > ul > li > a:focus {
   color: #c6c6c6;
   border: none;
   background-color: none;
 }
 
-#viewer-header > .active > a,
-#viewer-header > .active > a:hover,
-#viewer-header > .active > a:focus {
+#viewer-header .active > a,
+#viewer-header .active > a:hover,
+#viewer-header .active > a:focus {
   color: #c6c6c6;
 }
 
-#viewer-header > li:first-child a {
-  -webkit-border-radius: 4px 0 0 0;
-  -moz-border-radius: 4px 0 0 0;
-  border-radius: 4px 0 0 0;
-}
-
-#viewer-header > li:last-child a {
-  -webkit-border-radius: 0 4px 0 0;
-  -moz-border-radius: 0 4px 0 0;
-  border-radius: 0 4px 0 0;
+#viewer-content {
+  padding: 0 10px 10px 10px;
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 #carousel-indicator-container {
@@ -106,8 +101,16 @@ body {
 
 .viewer-arrow {
   position: absolute;
-  z-index: 1990;
-  top: 10px;
+  z-index: 1986;
+  top: 0;
+}
+
+.viewer-arrow.right {
+  right: 0;
+}
+
+.viewer-arrow.left {
+  left: 0;
 }
 
 .viewer-arrow i {
@@ -116,22 +119,38 @@ body {
   font-size: 48px;
 }
 
-.viewer-arrow.right {
-  float: right;
-  right: 10px;
-}
-
-.viewer-arrow.left {
-  float: left;
-  left: 10px;
-}
-
 .carousel-indicators {
   text-align: center;
-  left: 50px;
-  right: 50px;
+  left: 40px;
+  right: 40px;
 }
 
-.carousel-inner {
-  padding: 10px;
+#events-view-arrows {
+  height:50px;
+}
+
+#events-view-carousel .item {
+  height: 100%;
+  color:white;
+  font-family: "Raleway", Sans-Serif;
+}
+
+#events-view-carousel .event-date,
+#events-view-carousel .event-description,
+#events-view-carousel .event-location {
+  color: #ebebeb;
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 1;
+}
+
+#events-view-carousel .event-title {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+#events-view-carousel .event-description {
+  margin-top: 10px;
+  line-height: 1.5;
 }
