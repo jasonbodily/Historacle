@@ -13,36 +13,13 @@
         </ul>
       </div>
 
-      <div id="viewer-content" class="tab-content">
+      <div id="viewer-content" class="tab-content" ng-controller="HistoracleCtrl">
         <div id="events-pane" class="tab-pane active">
-          <div id="events-view" class="carousel slide">
-
-            <div id="events-view-arrows">
-              <a class="viewer-arrow left" href="#events-view" data-slide="prev"><i class="icon-chevron-left"></i></a>
-              <a class="viewer-arrow right" href="#events-view" data-slide="next"><i class="icon-chevron-right"></i></a>
-            </div>
-
-            <% events = Event.all %>
-
-            <!-- Carousel nav -->
-            <div id="events-view-indicators" >
-              <ol class="carousel-indicators">
-                <% events.each_with_index do |a, index| %>
-                   <li data-target="#events-view" data-slide-to="<%= index %>" class="<%= index == 0 ? "active": "" %>"></li>
-                <% end %>
-              </ol>
-            </div>
-
-            <!-- Carousel items -->
-            <div id="events-view-carousel" class="carousel-inner">
-              <% events.each_with_index do |event, index| %>
-                 <div class="<%= index == 0 ? "active": "" %> item event-item"><%= render "events/event", event: event %></div>
-              <% end %>
-            </div>
-
-          </div>
+          <%= render 'events_pane' %>
         </div>
-        <div class="tab-pane" id="areas-tab">Areas</div>
+        <div class="tab-pane" id="areas-tab">
+          <%= render 'areas_pane' %>
+        </div>
         <div class="tab-pane" id="settings-tab">
           <%= render 'settings_pane' %>
         </div>

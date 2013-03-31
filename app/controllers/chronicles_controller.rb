@@ -22,7 +22,7 @@ class ChroniclesController < ApplicationController
   # GET /chronicles/1.json
   def show
     @chronicle = Chronicle.find(params[:id])
-    @events =  @chronicle.events.order(sort_column + " " + sort_direction).paginate(:per_page =>10, :page => params[:page])
+    @events =  @chronicle.events.order(sort_column2 + " " + sort_direction2).paginate(:per_page =>10, :page => params[:page])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -97,10 +97,18 @@ class ChroniclesController < ApplicationController
   private
 
   def sort_column
-    (Event.column_names.include?(params[:sort])) ? params[:sort] : "title"
+    (Chronicle.column_names.include?(params[:sort])) ? params[:sort] : "name"
   end
 
   def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end
+
+  def sort_column2
+    (Event.column_names.include?(params[:sort])) ? params[:sort] : "title"
+  end
+
+  def sort_direction2
     %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 

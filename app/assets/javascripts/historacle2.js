@@ -1,4 +1,15 @@
-(function(window) {
+
+
+
+
+
+
+
+
+
+
+
+//(function(window) {
 //
 //   function create(element_id) {
 //      //if expression starts with # then return the corresponding element (substring removes first char)
@@ -20,29 +31,36 @@
 //   function historacle(elemnt) {
 //      this.element = elemnt;
 //   }
-   function renderEvent(event) {
 
-   }
 
-   var historacle = {
 
-      chronicles: {},
 
-      addChronicle: function(chronicle) {
-         chronicle.active = true;
-         return this.chronicles[chronicle.id] = chronicle;
-      },
+//   function renderEvent(event) {
+//
+//   }
+//
+//   var historacle = {
+//
+//      chronicles: {},
+//
+//      addChronicle: function(chronicle) {
+//         chronicle.active = true;
+//         return this.chronicles[chronicle.id] = chronicle;
+//      },
+//
+//      activateChronicle: function(id) {
+//         return this.chronicles[id].active = true;
+//      },
+//
+//      deactivateChronicle: function(id) {
+//         return this.chronicles[id].active = false;
+//      }
+//   }
+//
 
-      activateChronicle: function(id) {
-         return this.chronicles[id].active = true;
-      },
 
-      deactivateChronicle: function(id) {
-         return this.chronicles[id].active = false;
-      }
-   }
 
-//      remove: function(c) {
+////      remove: function(c) {
 //         this.element.removeChild(getJElement(c));
 //         return this;
 //      },
@@ -123,6 +141,6 @@
 //
 //   createJElement.version = "1.1.0";
 
-   window.historacle = historacle;
+//   window.historacle = historacle;
 //   window.getJElement = getJElement;
-})(this);
+//})(this);

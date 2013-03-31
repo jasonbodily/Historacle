@@ -1,10 +1,9 @@
 
 <table id="index-library-chronicles" class="table table-index ">
-
   <% @chronicles.each do |chronicle| %>
      <tr>
        <td><%= chronicle.name %></td>
-       <td><%= link_to "Add", chronicle_path(chronicle), class: 'btn btn-mini btn-add-chronicle pull-right' %></td>
+       <td><%= link_to "Add", "#", class: 'btn btn-mini btn-add-chronicle pull-right', :'ng-click' => "addChronicle(\"#{chronicle_path(chronicle)}\")" %></td>
      </tr>
   <% end %>
 </table>

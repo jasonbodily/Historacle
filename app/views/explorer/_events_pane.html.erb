@@ -1,0 +1,52 @@
+<div id="events-view" class="carousel slide">
+
+  <div id="events-view-arrows">
+    <a class="viewer-arrow left" href="#events-view" data-slide="prev"><i class="icon-chevron-left"></i></a>
+    <a class="viewer-arrow right" href="#events-view" data-slide="next"><i class="icon-chevron-right"></i></a>
+  </div>
+
+  <% if true %>
+
+     <div id="events-view-indicators">
+       <ol class="carousel-indicators">
+         <li ng-repeat="event in events" data-target="#events-view" data-slide-to="{{event.id}}" class=""></li>
+       </ol>
+     </div>
+
+     <!-- Carousel items -->
+     <div id="events-view-carousel" class="carousel-inner">
+       <div ng-repeat="event in events" class="item event-item">
+         <fieldset>
+           <p class="event-date">{{event.start_date}}</p>
+           <p class="event-location">{{event.location}}</p>
+           <p class="event-title">{{event.title}}</p>
+           <img src="{{event.image_url}}" alt="">
+           <p class="event-description">{{event.description}}</p>
+
+         </fieldset>
+       </div>
+     </div>
+
+  <% end %>
+</div>
+
+<% if false %>
+
+   <% events = Event.all %>
+   <!-- Carousel nav -->
+   <div id="events-view-indicators">
+     <ol class="carousel-indicators">
+       <% events.each_with_index do |a, index| %>
+          <li data-target="#events-view" data-slide-to="<%= index %>" class="<%= index == 0 ? "active" : "" %>"></li>
+       <% end %>
+     </ol>
+   </div>
+
+   <!-- Carousel items -->
+   <div id="events-view-carousel" class="carousel-inner">
+     <% events.each_with_index do |event, index| %>
+        <div class="<%= index == 0 ? "active" : "" %> item event-item"><%= render "events/event", event: event %></div>
+     <% end %>
+   </div>
+
+<% end %>
