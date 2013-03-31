@@ -1,0 +1,11 @@
+<h4>My Chronicles</h4>
+
+<%= form_tag index_for_viewer_chronicles_path, remote: true, id: "viewer-chronicles-search", class: "index-search" do %>
+
+     <div class="input-add-on"><i class="icon-search"></i></div>
+     <div class="input-field"><%= text_field_tag :search, params[:search], placeholder: "Search" %></div>
+<% end %>
+
+<div id="viewer-chronicles-index">
+  <%= render 'chronicles/index_for_viewer' %>
+</div>

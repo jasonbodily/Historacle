@@ -140,3 +140,43 @@ svg {
 #copy, #copy a {
     color: #aaa;
 }
+
+#viewer-chronicles-search {
+  margin: 0px;
+}
+
+#viewer-chronicles-search .input-prepend {
+  width: 100%;
+}
+
+#viewer-chronicles-search .input-add-on {
+  border-radius: 4px 0 0 4px;
+  display: inline-block;
+  height: 20px;
+  min-width: 16px;
+  padding: 4px 5px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+  text-align: center;
+  text-shadow: 0 1px 0 white;
+  background-color: #dddddd;
+  border: 1px solid #ccc;
+  float: left !important ;
+  width: 30px !important ;
+}
+
+#viewer-chronicles-search .input-field {
+  overflow: hidden !important ;
+  margin: 0;
+}
+
+#viewer-chronicles-search input {
+  border-left: none;
+  width: 100%;
+  height: 30px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-radius: 0 4px 4px 0;
+}

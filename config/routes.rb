@@ -12,7 +12,8 @@ Historacle::Application.routes.draw do
 
   scope "/library" do
     resources :chronicles do
-      resources :events  do
+      collection { get :index_for_viewer}
+      resources :events do
         collection { post :import }
       end
     end

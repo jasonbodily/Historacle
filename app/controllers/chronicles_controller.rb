@@ -12,6 +12,12 @@ class ChroniclesController < ApplicationController
     end
   end
 
+  # GET /chronicles
+  # GET /chronicles.json
+  def index_for_viewer
+    @chronicles = current_user.library.chronicles.search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 10, :page => params[:page])
+  end
+
   # GET /chronicles/1
   # GET /chronicles/1.json
   def show
@@ -91,7 +97,7 @@ class ChroniclesController < ApplicationController
   private
 
   def sort_column
-    (Event.column_names.include?(params[:sort])) ? params[:sort] : "start_date"
+    (Event.column_names.include?(params[:sort])) ? params[:sort] : "title"
   end
 
   def sort_direction

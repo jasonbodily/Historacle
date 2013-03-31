@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem "geocoder"
 gem 'gmaps4rails'
 gem 'font-awesome-sass-rails'
+gem 'active_model_serializers'
 
 # Gems used only for assets and not required
 # in production environments by default.

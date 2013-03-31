@@ -17,6 +17,20 @@
 
 //Initial load of page
 $(function() {
+
+   $(document).on('click', ".btn-add-chronicle", function (e) {
+      e.preventDefault();
+      $.getJSON($(this).attr('href'), function(data) {
+         historacle.addChronicle(data);
+      });
+      return false;
+   });
+
+   $(document).on('keyup', ".index-search", function () {
+      $.get($(this).attr('action'), $(this).serialize(), null, "script");
+      return false;
+   });
+
    $("#index-chronicle-events tr[data-link]").click(function() {
       $.getScript(this.dataset.link);
    });
