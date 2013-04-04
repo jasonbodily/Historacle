@@ -4,7 +4,7 @@ class ChroniclesController < ApplicationController
   # GET /chronicles
   # GET /chronicles.json
   def index
-    @chronicles = current_user.library.chronicles
+    @chronicles = current_user.library.chronicles.search(params[:search])
 
     respond_to do |format|
       format.html # index.html.erb

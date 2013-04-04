@@ -1,5 +1,5 @@
 class ExplorerController < ApplicationController
-
+  before_filter :authenticate_user!
   layout "viewer"
 
   def index

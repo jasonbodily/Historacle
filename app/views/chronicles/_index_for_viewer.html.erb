@@ -3,7 +3,7 @@
   <% @chronicles.each do |chronicle| %>
      <tr>
        <td><%= chronicle.name %></td>
-       <td><%= link_to "Add", "#", class: 'btn btn-mini btn-add-chronicle pull-right', :'ng-click' => "addChronicle(\"#{chronicle_path(chronicle)}\")" %></td>
+       <td><%= link_to "Add", "", class: 'btn btn-mini pull-right', :'ng-click' => "getChronicle(\"#{chronicle_path(chronicle)}\")" %></td>
      </tr>
   <% end %>
 </table>

@@ -131,6 +131,12 @@ body {
   height:50px;
 }
 
+#events-view-carousel{
+  position: absolute;
+  top: 50px;
+  bottom: 5px;
+}
+
 #events-view-carousel .item {
   height: 100%;
 }

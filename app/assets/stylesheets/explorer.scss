@@ -172,6 +172,7 @@ svg {
 }
 
 #viewer-chronicles-search input {
+  padding-left: 5px;
   border-left: none;
   width: 100%;
   height: 30px;
@@ -179,4 +180,31 @@ svg {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   border-radius: 0 4px 4px 0;
+}
+
+.carousel-control-container {
+  height: 60px;
+}
+
+.carousel-indicator-container {
+  height: 40px;
+}
+
+.carousel-inner .item {
+  height: 400px;
+}
+
+#viewer-content .tab-pane {
+  height:100%;
+}
+
+#event-view-empty {
+  padding: 0 5px 0 5px;
+  position: absolute;
+  top: 15px;
+  left: 90px;
+}
+
+#events-view {
+  height: 100%;
 }

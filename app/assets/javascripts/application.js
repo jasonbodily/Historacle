@@ -17,18 +17,26 @@
 //= require_tree .
 
 //Initial load of page
-$(function() {
 
-   $(document).on('keyup', ".index-search", function () {
-      $.get($(this).attr('action'), $(this).serialize(), null, "script");
-      return false;
-   });
+$(function () {
+//
+//   $(document).on('keyup', ".index-search", function () {
+//      $.getJSON($(this).attr('action'), function(chronicles) {
+//         var $rootScope = angular.injector(['ng']).get('$rootScope');
+//         $rootScope.$apply(function() {
+//            listedChronicles = chronicles;
+//         });
+//      });
+//      return false;
+//   });
 
-   $("#index-chronicle-events tr[data-link]").click(function() {
+
+
+   $("#index-chronicle-events tr[data-link]").click(function () {
       $.getScript(this.dataset.link);
    });
 
-   $("#index-library-chronicles tr[data-link]").click(function() {
+   $("#index-library-chronicles tr[data-link]").click(function () {
       window.location = this.dataset.link;
    });
 });
