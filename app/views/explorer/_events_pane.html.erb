@@ -15,7 +15,7 @@
      <!-- Carousel items -->
      <div id="events-view-carousel" class="carousel-inner">
       <fieldset ng-repeat="event in events | orderBy:'start_date'" class="item event-item">
-        <p class="event-date">{{event.start_date}}</p>
+        <p class="event-date">{{event.start_date | date:'MMMM dd, yyyy'}}</p>
 
         <p class="event-location">{{event.location}}</p>
 

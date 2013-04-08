@@ -2,31 +2,84 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/historacleMap.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/historacle2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/homebase.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/look.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/polymaps.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/tsv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/world.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/explorer/_timeline.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/angular.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/historacle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/historacle.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/chronicles/index.js.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/timeline.js.coffee" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jElement.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/chronicles/index.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/chronicles/index_for_viewer.js.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/libraries/index.html.erb" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/historacle.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/historacleController.js.coffee" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/chronicles/_index_for_viewer.html.erb" afterPath="$PROJECT_DIR$/app/views/chronicles/_index.html.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/layouts/viewer.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/historacle.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/explorer/_events_pane.html.erb" afterPath="$PROJECT_DIR$/app/views/explorer/_events_pane.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/chronicles/_index_for_viewer.html.erb" afterPath="$PROJECT_DIR$/app/views/chronicles/_index_for_viewer.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/chronicles/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/chronicles/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/libraries/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/libraries/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/_index_by_chronicle.html.erb" afterPath="$PROJECT_DIR$/app/views/events/_index_by_chronicle.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/chronicles/_index_by_library.html.erb" afterPath="$PROJECT_DIR$/app/views/chronicles/_index_by_library.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_navbar-inner.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_navbar-inner.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/explorer/_settings_pane.html.erb" afterPath="$PROJECT_DIR$/app/views/explorer/_settings_pane.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/_show.html.erb" afterPath="$PROJECT_DIR$/app/views/events/_show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_o.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_o.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/chronicles_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/chronicles_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/explorer.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/explorer.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/chronicles/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/chronicles/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/events_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/events_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/explorer_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/explorer_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/historacle.iml" afterPath="$PROJECT_DIR$/.idea/historacle.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/historacle.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/historacle.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/historacleMap.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/historacleMap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/index.html.erb" afterPath="$PROJECT_DIR$/app/views/events/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/explorer/index.html.erb" afterPath="$PROJECT_DIR$/app/views/explorer/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/libraries_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/libraries_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/chronicles/show.html.erb" afterPath="$PROJECT_DIR$/app/views/chronicles/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/libraries/show.html.erb" afterPath="$PROJECT_DIR$/app/views/libraries/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="historacle.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365095700596" ignored="false" />
+    <file path="/Dummy.txt" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365201604460" ignored="false" />
+    <file path="/viewer.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365096283571" ignored="false" />
+    <file path="/explorer_controller.rb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365096809101" ignored="false" />
+    <file path="/routes.rb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365124763034" ignored="false" />
+    <file path="/_index_by_library.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365098404641" ignored="false" />
+    <file path="/show.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365101567831" ignored="false" />
+    <file path="/_index_by_chronicle.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365103123101" ignored="false" />
+    <file path="/_form.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365103202937" ignored="false" />
+    <file path="/fragment.rb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365102744132" ignored="false" />
+    <file path="/index.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365221461305" ignored="false" />
+    <file path="/chronicles_controller.rb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365103309265" ignored="false" />
+    <file path="/edit.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365099641006" ignored="false" />
+    <file path="/_navbar-inner.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365100839961" ignored="false" />
+    <file path="/application_controller.rb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365100735628" ignored="false" />
+    <file path="/_index_for_viewer.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365100790000" ignored="false" />
+    <file path="/a.dummy" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365403414871" ignored="false" />
+    <file path="/bootstrap_o.scss" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365101104806" ignored="false" />
+    <file path="/libraries_controller.rb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365101990015" ignored="false" />
+    <file path="/_show.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365102764339" ignored="false" />
+    <file path="/_settings_pane.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365104213686" ignored="false" />
+    <file path="/iframe.html" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365115051730" ignored="false" />
+    <file path="/dummy.xml" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365144171806" ignored="false" />
+    <file path="/historacle.scss" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365124488212" ignored="false" />
+    <file path="/historacle.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365124405116" ignored="false" />
+    <file path="/timeline.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365146189646" ignored="false" />
+    <file path="/historacle.js" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365131555670" ignored="false" />
+    <file path="/_timeline.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365403759740" ignored="false" />
+    <file path="/historacleController.js.coffee" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365404616198" ignored="false" />
+    <file path="/_events_pane.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365149325939" ignored="false" />
+    <file path="/environment.rb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365234863577" ignored="false" />
+    <file path="/timeline.js.coffee" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365316508926" ignored="false" />
+    <file path="/angular.min.js" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365404079147" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,10 +96,66 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/explorer/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="42" selection-start="894" selection-end="894" vertical-scroll-proportion="0.0">
+            <state line="0" column="53" selection-start="53" selection-end="53" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_timeline.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/explorer/_timeline.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="26" selection-start="375" selection-end="375" vertical-scroll-proportion="-4.48">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="14" selection-start="591" selection-end="591" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_settings_pane.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/explorer/_settings_pane.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="42" selection-start="614" selection-end="614" vertical-scroll-proportion="-9.6">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="historacleController.js.coffee" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/historacleController.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="31" selection-start="3140" selection-end="3140" vertical-scroll-proportion="0.77517563">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="timeline.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/timeline.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="156" column="80" selection-start="4277" selection-end="4277" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="historacle.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/historacle.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="38" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -54,10 +163,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application_helper.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+      <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environment.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="27" selection-start="50" selection-end="50" vertical-scroll-proportion="0.042723633">
+            <state line="5" column="0" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -81,22 +190,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/chronicles_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/explorer_controller.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/historacle2.js.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/historacle2.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/historacleMap.js.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/test.js.coffee" />
-        <option value="$PROJECT_DIR$/app/views/chronicles/_index_for_viewer.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/explorer/_settings_pane.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/historacle.js.coffee" />
-        <option value="$PROJECT_DIR$/app/views/explorer/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/historacle.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/historacleMap.js" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
+        <option value="$PROJECT_DIR$/app/views/explorer/timeline.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/moment.js" />
         <option value="$PROJECT_DIR$/app/views/explorer/_events_pane.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_o.scss" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/explorer.scss" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+        <option value="$PROJECT_DIR$/app/views/explorer/index.html.erb" />
+        <option value="$PROJECT_DIR$/config/environment.rb" />
+        <option value="$PROJECT_DIR$/config/application.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/timeline.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/timeline.js.coffee" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/historacle.js" />
+        <option value="$PROJECT_DIR$/app/views/explorer/_timeline.html.erb" />
+        <option value="$PROJECT_DIR$/vendor/assets/javascripts/angular.min.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/historacleController.js.coffee" />
       </list>
     </option>
   </component>
@@ -139,7 +248,6 @@
     </navigator>
     <panes>
       <pane id="RailsProjectView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -168,6 +276,190 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="explorer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -186,7 +478,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -205,6 +497,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -230,22 +526,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="75" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="124" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="139" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../LDSCounselors" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="87" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1078" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="939" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1078" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="145" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="141" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -271,11 +586,11 @@
       <recent name="$PROJECT_DIR$/app/views/chronicles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/images" />
-      <recent name="$PROJECT_DIR$/public/look" />
+      <recent name="$PROJECT_DIR$/vendor/assets/javascripts" />
+      <recent name="$PROJECT_DIR$/public/explorer" />
       <recent name="$PROJECT_DIR$/app/assets/javascripts" />
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/app/views/look" />
+      <recent name="$PROJECT_DIR$/app/assets/stylesheets" />
+      <recent name="$PROJECT_DIR$/vendor/assets/stylesheets" />
     </key>
   </component>
   <component name="RunManager" selected="Rails.Development: historacleMap">
@@ -405,13 +720,6 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
-      <method />
-    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -445,6 +753,13 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
@@ -600,19 +915,19 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41335046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25824964" sideWeight="0.21879022" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19799139" sideWeight="0.5444015" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45559844" sideWeight="0.9907063" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26040173" sideWeight="0.6469833" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35301667" sideWeight="0.9845041" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25824964" sideWeight="0.21879022" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948583" sideWeight="0.500612" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948583" sideWeight="0.500612" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32689834" sideWeight="0.49510404" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.55851066" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -672,98 +987,126 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/controllers/events_controller.rb</url>
-          <line>47</line>
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/controllers/events_controller.rb</url>
-          <line>65</line>
-        </line-breakpoint>
-      </breakpoints>
+      <option name="time" value="9" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/explorer/_settings_pane.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="28" selection-end="96" vertical-scroll-proportion="0.056737587" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/chronicles/_index_for_viewer.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="66" selection-start="327" selection-end="327" vertical-scroll-proportion="0.24060151" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/explorer/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="39" selection-start="465" selection-end="465" vertical-scroll-proportion="0.022068966" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/explorer/_events_pane.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="44" selection-start="585" selection-end="585" vertical-scroll-proportion="0.051034484" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/explorer.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="210" column="0" selection-start="3186" selection-end="3186" vertical-scroll-proportion="0.872" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap_o.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="14" selection-start="3116" selection-end="3116" vertical-scroll-proportion="0.33866668" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/events.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="133" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.6817576" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application-fonts.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jElement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="25" selection-start="675" selection-end="675" vertical-scroll-proportion="0.36218375" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/historacleMap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="44" selection-start="1140" selection-end="1140" vertical-scroll-proportion="0.022636484" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/historacle.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="16" selection-start="205" selection-end="205" vertical-scroll-proportion="0.1704394" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/libraries.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="5" column="3" selection-start="118" selection-end="118" vertical-scroll-proportion="0.15037593">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/historacleMap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="42" selection-start="894" selection-end="894" vertical-scroll-proportion="0.0">
+        <state line="75" column="13" selection-start="2302" selection-end="2302" vertical-scroll-proportion="0.3680431">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20120815075854_create_events.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="62" selection-start="391" selection-end="391" vertical-scroll-proportion="0.51705563">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/explorer.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="177" column="33" selection-start="2742" selection-end="2833" vertical-scroll-proportion="0.3016627">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="603" selection-end="603" vertical-scroll-proportion="0.64608073">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="0" selection-start="2819" selection-end="2819" vertical-scroll-proportion="0.695962">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/explorer/_events_pane.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="56" selection-start="965" selection-end="965" vertical-scroll-proportion="0.02631579">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/timeline.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="156" column="80" selection-start="4277" selection-end="4277" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/historacle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="38" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="27" selection-start="50" selection-end="50" vertical-scroll-proportion="0.042723633">
+        <state line="5" column="0" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/assets/javascripts/angular.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1161" column="31" selection-start="38269" selection-end="38269" vertical-scroll-proportion="0.6318182">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1365404203000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1365404203000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/explorer/_timeline.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="26" selection-start="375" selection-end="375" vertical-scroll-proportion="-4.48">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="14" selection-start="591" selection-end="591" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/explorer/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="53" selection-start="53" selection-end="53" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/explorer/_settings_pane.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="42" selection-start="614" selection-end="614" vertical-scroll-proportion="-9.6">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/historacleController.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="31" selection-start="3140" selection-end="3140" vertical-scroll-proportion="0.77517563">
           <folding />
         </state>
       </provider>

@@ -14,7 +14,7 @@
        <td><%= chronicle.description %></td>
        <td><%= chronicle.subject %></td>
        <td><%= link_to 'Edit', edit_chronicle_path(chronicle) %></td>
-       <td><%= link_to 'Destroy', chronicle, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+       <td><%= link_to 'Destroy', chronicle_path(chronicle), method: :delete, data: {confirm: 'Are you sure?'} %></td>
      </tr>
   <% end %>
 </table>

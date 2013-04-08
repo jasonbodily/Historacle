@@ -9,7 +9,7 @@
     <small><%= @event.start_date %></small>
   </blockquote>
 
-  <%= link_to "Edit", edit_chronicle_event_path, remote: true %>
+  <%= link_to "Edit", edit_chronicle_event_path(@event.chronicle, @event), remote: true %>
 
   <p><%= @event.description %></p>
 

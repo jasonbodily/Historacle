@@ -50,7 +50,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to [@chronicle, @event], notice: 'Event was successfully created.' }
+        format.html { redirect_to @chronicle, notice: 'Event was successfully created.' }
         format.json { render json: @event, status: :created, location: @event }
       else
         format.html { render action: "new" }
@@ -67,7 +67,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.update_attributes(params[:event])
-        format.html { redirect_to [@chronicle, @event], notice: 'Event was successfully updated.' }
+        format.html { redirect_to @chronicle, notice: 'Event was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -84,7 +84,7 @@ class EventsController < ApplicationController
     @event.destroy
 
     respond_to do |format|
-      format.html { redirect_to chronicle_path(@chronicle) }
+      format.html { redirect_to @chronicle, notice: 'Event was successfully updated.' }
       format.json { head :no_content }
     end
   end

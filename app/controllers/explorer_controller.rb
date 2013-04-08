@@ -1,6 +1,6 @@
 class ExplorerController < ApplicationController
   before_filter :authenticate_user!
-  layout "viewer"
+  layout "historacle"
 
   def index
     @chronicles = current_user.library.chronicles

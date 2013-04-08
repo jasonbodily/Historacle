@@ -59,11 +59,11 @@ class LibrariesController < ApplicationController
   # PUT /libraries/1
   # PUT /libraries/1.json
   def update
-    @library = Library.find(params[:id])
+    @library = current_user.library || Library.create(user_id: current_user.id)
 
     respond_to do |format|
       if @library.update_attributes(params[:library])
-        format.html { redirect_to @library, notice: 'Library was successfully updated.' }
+        format.html { redirect_to library_path, notice: 'Library was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

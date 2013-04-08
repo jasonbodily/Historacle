@@ -89,5 +89,4 @@ $(function () {
 
       window.HistoracleMap = new historacleMap('map');
    })(window);
-
 });

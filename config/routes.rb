@@ -5,36 +5,25 @@ Historacle::Application.routes.draw do
   get "explorer/index1"
   get "explorer/index2"
   get "explorer/index3"
+  get "explorer/timeline"
 
   get "homebase/index"
 
-  resources :libraries, as: 'library', :only => [:edit, :show, :update]
+  resource :libraries, only: [:edit, :show, :update], path: 'library', as: 'library'
 
-  scope "/library" do
-    resources :chronicles do
-      collection { get :index_for_viewer}
-      resources :events do
-        collection { post :import }
-      end
+  resources :chronicles, only: [:create, :new, :edit, :show, :update, :destroy] do
+    resources :events do
+      collection { post :import }
     end
-  end
-  #namespace :library do
-  #  resources :chronicles do
-  #    resources :events
-  #  end
-  #end
-
-  #resources :libraries, as: "library" do
-  #  resources :chronicles
-  #end
-
-  authenticated :user do
-    root to: "libraries#show"
   end
 
   devise_for :users
 
   root :to => "homebase#index"
+
+  #authenticated :user do
+  #  root to: "libraries#show"
+  #end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

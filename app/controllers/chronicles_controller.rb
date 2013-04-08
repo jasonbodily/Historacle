@@ -4,18 +4,12 @@ class ChroniclesController < ApplicationController
   # GET /chronicles
   # GET /chronicles.json
   def index
-    @chronicles = current_user.library.chronicles.search(params[:search])
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @chronicles }
-    end
-  end
-
-  # GET /chronicles
-  # GET /chronicles.json
-  def index_for_viewer
     @chronicles = current_user.library.chronicles.search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 10, :page => params[:page])
+
+    #respond_to do |format|
+    #  format.html # index.html.erb
+    #  format.json { render json: @chronicles }
+    #end
   end
 
   # GET /chronicles/1
@@ -44,6 +38,7 @@ class ChroniclesController < ApplicationController
 
   # GET /chronicles/1/edit
   def edit
+    @library = current_user.library
     @chronicle = Chronicle.find(params[:id])
   end
 
@@ -87,7 +82,7 @@ class ChroniclesController < ApplicationController
     @chronicle.destroy
 
     respond_to do |format|
-      format.html { redirect_to chronicles_url }
+      format.html { redirect_to library_path }
       format.json { head :no_content }
     end
   end

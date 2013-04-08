@@ -1,3 +1,8 @@
+body {
+  padding-top: 60px;
+  font-family: "Raleway", Sans-Serif;
+}
+
 //Bootstrap
 @import "bootstrap";
 @import "bootstrap-responsive";
@@ -7,9 +12,9 @@ a:hover {
   text-decoration: none;
 }
 
-body {
-  margin-top: 60px;
-  font-family: "Raleway", Sans-Serif;
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+  color: whitesmoke;
 }
 
 .navbar-inner {

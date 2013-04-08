@@ -1,4 +1,4 @@
-<div class="dashboard">
+<div class="dashboard" ng-controller="HistoracleCtrl">
   <div id="map">
 
   </div>
@@ -13,7 +13,7 @@
         </ul>
       </div>
 
-      <div id="viewer-content" class="tab-content" ng-controller="HistoracleCtrl">
+      <div id="viewer-content" class="tab-content" >
         <div id="events-pane" class="tab-pane active">
           <%= render 'events_pane' %>
         </div>
@@ -30,77 +30,15 @@
 
   <div id="timeline-wrapper">
     <div id="timeline">
-
+      <%= render 'explorer/timeline' %>
     </div>
   </div>
 
-  <style type="text/css">
-
-
-  </style>
 </div>
 
 <script type="text/javascript">
    $(function () {
       $('#events-view').carousel('pause');
-//      var map = L.map('map').setView([51.505, -0.09], 3);
-//     L.tileLayer('http://{s}.tile.cloudmade.com/06b9e7be60cf41f290a310df8248d1dd/90649/256/{z}/{x}/{y}.png', {
-//         zoom: 6,
-//         maxZoom: 10
-//      }).addTo(map);
-
-//      var greenIcon = L.icon({
-//         iconUrl:'<%#= root_url%>images/pin-green.png',
-////      shadowUrl: 'leaf-shadow.png',
-//         iconSize:[32, 32], // size of the icon
-//         iconAnchor:[16, 32], // point of the icon which will correspond to marker's location
-//         popupAnchor:[-0, -30] // point from which the popup should open relative to the iconAnchor
-//      });
-
-//      var blueIcon = L.icon({
-//         iconUrl:'<%#= root_url%>images/pin-blue.png',
-////      shadowUrl: 'leaf-shadow.png',
-//         iconSize:[32, 32], // size of the icon
-//         iconAnchor:[16, 32], // point of the icon which will correspond to marker's location
-//         popupAnchor:[-0, -30] // point from which the popup should open relative to the iconAnchor
-//      });
-
-//
-//      var littleton = L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.'),
-//         denver = L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.'),
-//         aurora = L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.'),
-//         golden = L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.');
-
-//      var cities = L.layerGroup([littleton, denver, aurora, golden]);
-//      var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/06b9e7be60cf41f290a310df8248d1dd/{styleId}/256/{z}/{x}/{y}.png',
-//         cloudmadeAttribution = '';
-//
-//      var minimal = L.tileLayer(cloudmadeUrl, {styleId:22677, attribution:cloudmadeAttribution});
-//         midnight = L.tileLayer(cloudmadeUrl, {styleId:999, attribution:cloudmadeAttribution}),
-//         motorways = L.tileLayer(cloudmadeUrl, {styleId:46561, attribution:cloudmadeAttribution});
-
-//      var map = L.map('map', {
-//         center:new L.LatLng(44.078156, -123.054494),
-//         zoom:3,
-//         layers:[minimal]
-//      });
-//      var baseMaps = {
-//         "Minimal":minimal,
-//         "Night View":midnight
-//      };
-//
-//      var overlayMaps = {
-//         "Motorways":motorways,
-//         "Cities":cities
-//      };
-//      L.control.layers(baseMaps, overlayMaps).addTo(map);
-
-//      L.marker([51.5, -0.09], {icon:greenIcon, title:"ThebigCheese"}).addTo(map);
-//      L.marker([50.5, -3.19], {icon:blueIcon, title:"ThesmallCheese"}).addTo(map);
-//      L.marker([44.078156, -123.054494], {icon:blueIcon, title:"Eugene Oregon"}).addTo(map);
-//
-   })
-
-
+   });
 </script>
 

@@ -13,10 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//= require angular
-//= require_tree .
-
-//Initial load of page
+//= require events
+//= require chronicles
+//= require libraries
 
 $(function () {
 //
