@@ -9,9 +9,18 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require bootstrap_o
+ *= require application-fonts
+ *= require homebase
+ *= require libraries
+ *= require chronicles
+ *= require events
  */
 
 .table-index tr[data-link]:hover {
   cursor: pointer;
 }
+
+body {
+  background: url(/images/bg-wrapper.jpg)
+};

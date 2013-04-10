@@ -1,16 +1,18 @@
 <div id="timeline-pane">
   <div id="timeline-events">
-    <svg class="timeline-event-group" >
-      <a class="timeline-event" ng-repeat="event in events" oldtitle="{{event.title}}" aria-describedby="ui-tooltip-4">
-        <circle svg-cx="{{getOffset(event.start_date)}}" cy="60" r="5" fill="lightgreen" stroke="black" stroke-width="1"></circle>
+    <svg class="timeline-event-group">
+      <a class="timeline-event" ng-repeat="event in events" ng-click="selectEvent(event)">
+        <circle svg-cx="{{getCx(event.start_date)}}" svg-cy="{{getCy(event.chronicle_id)}}" r="5" svg-fill="{{getFill(event.chronicle_id)}}" stroke="black" stroke-width="1"></circle>
       </a>
     </svg>
   </div>
-  <div id="timeline-line">
-    <div class="minor-lines" ></div>
-    <div class="major-lines">
 
-      <div  ng-repeat="mu in timeline.major_units" style="{{getOffset(mu)}}">
+  <div id="timeline-line">
+    <div class="indicator" style="left:50%"><i class="icon-chevron-up"></i></div>
+    <div class="minor-lines"></div>
+    <div class="major-lines" ng-hide="isEmpty(events)">
+
+      <div ng-repeat="mu in timeline.major_units" style="{{getOffset(mu)}}">
         <div class="major-line"></div>
         {{ mu | date:'dd-MM-yyyy'}}
       </div>
@@ -20,6 +22,14 @@
 </div>
 
 <style type="text/css">
+
+   .indicator {
+      position: absolute;
+      text-align: center;
+      margin-left: -10px;
+      width: 20px;
+   }
+
    #timeline-pane {
       position: absolute;
       left: 20px;
@@ -92,6 +102,7 @@
    }
 
    .timeline-event-group {
+      position: absolute;
       padding: 0 10px;
       height: 100%;
       width: 100%;
@@ -99,11 +110,6 @@
       box-sizing: border-box;
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
-   }
-
-   circle {
-      height: 20px;
-      width:  20px;
    }
 
 </style>

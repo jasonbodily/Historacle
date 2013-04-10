@@ -3,7 +3,6 @@ $(function () {
       e.preventDefault();
       address = $('.geocode-input').val();
       typeof geocoder === 'undefined' ? geocoder = new google.maps.Geocoder() : geocoder;
-
       geocoder.geocode({ 'address':address}, function (results, status) {
          if (status == google.maps.GeocoderStatus.OK) {
             updateGeoFields(results);
@@ -21,6 +20,7 @@ $(function () {
       if (lat && lng) {
          updateMap(mapUrl([lat,lng]));
       }
+
    }
 
    $('.geocode-input').blur(function () {
@@ -49,6 +49,11 @@ $(function () {
 
    function updateMap(src) {
       $('.event-map > span > img').attr('src', src);
+      $('.event-map > span > img').load(function(){
+         if ($('.event-map').css('display') == "none") {
+            $('.event-map').slideDown("slow");
+         }
+      });
    }
 
    function showSpinner() {

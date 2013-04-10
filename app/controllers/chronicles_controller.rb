@@ -17,7 +17,7 @@ class ChroniclesController < ApplicationController
   def show
     @chronicle = Chronicle.find(params[:id])
     @events =  @chronicle.events.order(sort_column2 + " " + sort_direction2).paginate(:per_page =>10, :page => params[:page])
-
+    @event = @chronicle.events.build
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @chronicle }

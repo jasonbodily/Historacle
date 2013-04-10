@@ -8,10 +8,6 @@ body {
 @import "bootstrap-responsive";
 @import "font-awesome";
 
-a:hover {
-  text-decoration: none;
-}
-
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
   color: whitesmoke;
@@ -109,7 +105,7 @@ a:hover {
 .viewer-arrow {
   position: absolute;
   z-index: 1986;
-  top: 0;
+  top: 1px;
 }
 
 .viewer-arrow.right {
@@ -123,13 +119,20 @@ a:hover {
 .viewer-arrow i {
   color: #777777;
   text-shadow: 3px 3px 3px rgba(0,0,0,.5);
-  font-size: 48px;
+  font-size: 28px;
 }
 
 .carousel-indicators {
   text-align: center;
-  left: 40px;
-  right: 40px;
+  top: 5px;
+  left: 20px;
+  right: 20px;
+}
+
+.carousel-indicators li {
+  width: 5px;
+  height: 15px;
+  cursor: pointer;
 }
 
 #events-view-arrows {

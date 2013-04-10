@@ -22,15 +22,33 @@ $(function () {
             return map_id
          }
 
+         this.setView = function(event) {
+            var map = this.getMap(),
+               bounds = map.getBounds(),
+               map_height = bounds._southWest.lat - bounds._northEast.lat,
+               map_width = bounds._northEast.lng - bounds._southWest.lng;
+
+            w = $('#map').width();
+            h = $('#map').outerHeight();
+
+            block_height = $('#timeline-wrapper').outerHeight() + 20;
+            block_width = $('#viewer-wrapper').outerWidth();
+
+            adj_height = ((.5*block_height)/h)*map_height
+            adj_width = ((.5*block_width)/w)*map_width
+
+            map.setView([parseFloat(event.latitude)+adj_height, parseFloat(event.longitude)+adj_width], map._zoom)
+         }
+
          this.createChronicleEvents = function(chronicle) {
-            var markers = this.createMarkersLayer(chronicle.events, {position: Object.keys(layers).length}),
+            var markers = this.createMarkersLayer(chronicle.events, {color: chronicle.color}),
                layer = L.layerGroup(markers);
             layer.addTo(map);
             this.recordLayer(chronicle.id, layer)
          }
 
-         this.deleteChronicleEvents = function(chronicle) {
-            var layer = this.deleteLayer(chronicle.id);
+         this.deleteChronicleEvents = function(id) {
+            var layer = this.deleteLayer(id);
          }
 
          this.recordLayer = function(chronicle_id, layer) {
@@ -63,18 +81,8 @@ $(function () {
          },
 
          createMarker: function (event, options) {
-            var iconURL;
-            switch(options["position"]) {
-               case 0:
-                  iconURL = '/images/pin-green.png';
-                  break;
-               case 1:
-                  iconURL = '/images/pin-blue.png';
-                  break;
-               default:
-                  iconURL = '/images/pin-green.png';
-            }
-            var greenIcon = L.icon({
+            var iconURL = options.color.img_url;
+            var icon = L.icon({
                iconUrl: iconURL,
                // shadowUrl: 'leaf-shadow.png',
                iconSize:[32, 32], // size of the icon
@@ -82,9 +90,8 @@ $(function () {
                popupAnchor:[-0, -30] // point from which the popup should open relative to the iconAnchor
             });
 
-            return L.marker([event.latitude, event.longitude], {icon:greenIcon, title: event.title});
+            return L.marker([event.latitude, event.longitude], options={icon: icon, title: event.title, id: "map-event-" + event.id});
          }
-
       }
 
       window.HistoracleMap = new historacleMap('map');

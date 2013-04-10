@@ -2,84 +2,94 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/explorer/_timeline.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/historacle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/historacle.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/chronicles/index.js.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/timeline.js.coffee" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jElement.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/chronicles/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/chronicles/index_for_viewer.js.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/libraries/index.html.erb" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/historacle.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/historacleController.js.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/chronicles/_index_for_viewer.html.erb" afterPath="$PROJECT_DIR$/app/views/chronicles/_index.html.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/layouts/viewer.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/historacle.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/events/_new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/leaflet.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/leaflet.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/events/new.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/pin-blue.png" afterPath="$PROJECT_DIR$/public/images/pin-blue.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/explorer/_areas_pane.html.erb" afterPath="$PROJECT_DIR$/app/views/explorer/_areas_pane.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/explorer/_events_pane.html.erb" afterPath="$PROJECT_DIR$/app/views/explorer/_events_pane.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/chronicles/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/chronicles/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/libraries/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/libraries/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/chronicles/_index.html.erb" afterPath="$PROJECT_DIR$/app/views/chronicles/_index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/_index_by_chronicle.html.erb" afterPath="$PROJECT_DIR$/app/views/events/_index_by_chronicle.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/chronicles/_index_by_library.html.erb" afterPath="$PROJECT_DIR$/app/views/chronicles/_index_by_library.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_navbar-inner.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_navbar-inner.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/explorer/_settings_pane.html.erb" afterPath="$PROJECT_DIR$/app/views/explorer/_settings_pane.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/_show.html.erb" afterPath="$PROJECT_DIR$/app/views/events/_show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/explorer/_timeline.html.erb" afterPath="$PROJECT_DIR$/app/views/explorer/_timeline.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_o.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_o.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/chronicles_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/chronicles_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/chronicles/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/chronicles/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/edit.js.erb" afterPath="$PROJECT_DIR$/app/views/events/edit.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/serializers/event_serializer.rb" afterPath="$PROJECT_DIR$/app/serializers/event_serializer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/events.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/events.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/events.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/events.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/events_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/events_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/explorer_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/explorer_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/explorer.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/explorer.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/historacle.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/historacle.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/historacle.iml" afterPath="$PROJECT_DIR$/.idea/historacle.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/historacle.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/historacle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/historacle.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/historacle.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/historacleController.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/historacleController.js.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/historacleMap.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/historacleMap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/index.html.erb" afterPath="$PROJECT_DIR$/app/views/events/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/explorer/index.html.erb" afterPath="$PROJECT_DIR$/app/views/explorer/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/libraries_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/libraries_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/chronicles/show.html.erb" afterPath="$PROJECT_DIR$/app/views/chronicles/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/libraries/show.html.erb" afterPath="$PROJECT_DIR$/app/views/libraries/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/explorer/index1.html.erb" afterPath="$PROJECT_DIR$/app/views/explorer/index1.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/explorer/index2.html.erb" afterPath="$PROJECT_DIR$/app/views/explorer/index2.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/explorer/index3.html.erb" afterPath="$PROJECT_DIR$/app/views/explorer/index3.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/new.html.erb" afterPath="$PROJECT_DIR$/app/views/events/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/show.html.erb" afterPath="$PROJECT_DIR$/app/views/events/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/show.js.erb" afterPath="$PROJECT_DIR$/app/views/events/show.js.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="historacle.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365201604460" ignored="false" />
+    <file path="/Dummy.txt" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365474623965" ignored="false" />
     <file path="/viewer.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365096283571" ignored="false" />
     <file path="/explorer_controller.rb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365096809101" ignored="false" />
     <file path="/routes.rb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365124763034" ignored="false" />
     <file path="/_index_by_library.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365098404641" ignored="false" />
-    <file path="/show.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365101567831" ignored="false" />
-    <file path="/_index_by_chronicle.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365103123101" ignored="false" />
-    <file path="/_form.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365103202937" ignored="false" />
+    <file path="/show.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365618825009" ignored="false" />
+    <file path="/_index_by_chronicle.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365618231434" ignored="false" />
+    <file path="/_form.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365572393563" ignored="false" />
     <file path="/fragment.rb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365102744132" ignored="false" />
-    <file path="/index.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365221461305" ignored="false" />
-    <file path="/chronicles_controller.rb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365103309265" ignored="false" />
+    <file path="/index.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365483138443" ignored="false" />
+    <file path="/chronicles_controller.rb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365618057562" ignored="false" />
     <file path="/edit.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365099641006" ignored="false" />
     <file path="/_navbar-inner.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365100839961" ignored="false" />
     <file path="/application_controller.rb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365100735628" ignored="false" />
     <file path="/_index_for_viewer.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365100790000" ignored="false" />
-    <file path="/a.dummy" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365403414871" ignored="false" />
-    <file path="/bootstrap_o.scss" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365101104806" ignored="false" />
+    <file path="/a.dummy" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365559279464" ignored="false" />
+    <file path="/bootstrap_o.scss" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365557182428" ignored="false" />
     <file path="/libraries_controller.rb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365101990015" ignored="false" />
-    <file path="/_show.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365102764339" ignored="false" />
-    <file path="/_settings_pane.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365104213686" ignored="false" />
+    <file path="/_show.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365619445953" ignored="false" />
+    <file path="/_settings_pane.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365459757827" ignored="false" />
     <file path="/iframe.html" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365115051730" ignored="false" />
-    <file path="/dummy.xml" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365144171806" ignored="false" />
-    <file path="/historacle.scss" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365124488212" ignored="false" />
+    <file path="/dummy.xml" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365619410720" ignored="false" />
+    <file path="/historacle.scss" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365554901733" ignored="false" />
     <file path="/historacle.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365124405116" ignored="false" />
     <file path="/timeline.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365146189646" ignored="false" />
-    <file path="/historacle.js" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365131555670" ignored="false" />
-    <file path="/_timeline.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365403759740" ignored="false" />
-    <file path="/historacleController.js.coffee" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365404616198" ignored="false" />
-    <file path="/_events_pane.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365149325939" ignored="false" />
+    <file path="/historacle.js" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365556194389" ignored="false" />
+    <file path="/_timeline.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365491622739" ignored="false" />
+    <file path="/historacleController.js.coffee" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365489120354" ignored="false" />
+    <file path="/_events_pane.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365491805747" ignored="false" />
     <file path="/environment.rb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365234863577" ignored="false" />
     <file path="/timeline.js.coffee" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365316508926" ignored="false" />
     <file path="/angular.min.js" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365404079147" ignored="false" />
+    <file path="/event_serializer.rb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365451439969" ignored="false" />
+    <file path="/historacleMap.js" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365556326186" ignored="false" />
+    <file path="/_index.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365459793535" ignored="false" />
+    <file path="/explorer.scss" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365491790819" ignored="false" />
+    <file path="/index1.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365467776862" ignored="false" />
+    <file path="/index2.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365467782593" ignored="false" />
+    <file path="/index3.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365467789388" ignored="false" />
+    <file path="/_areas_pane.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365492066576" ignored="false" />
+    <file path="/leaflet.js" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365555493700" ignored="false" />
+    <file path="/application.scss" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365567919609" ignored="false" />
+    <file path="/new.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365617623083" ignored="false" />
+    <file path="/events.scss" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365619334859" ignored="false" />
+    <file path="/events.js" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365614419358" ignored="false" />
+    <file path="/application_helper.rb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365613767123" ignored="false" />
+    <file path="/_new.html.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365618298524" ignored="false" />
+    <file path="/events_controller.rb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365618188149" ignored="false" />
+    <file path="/new.js.erb" changelist="e1c145b2-4392-4b7b-b1dc-5e04b6248c7f" time="1365618256367" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,77 +106,91 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/explorer/index.html.erb">
+      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/events/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="53" selection-start="53" selection-end="53" vertical-scroll-proportion="-0.0">
+            <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_timeline.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/explorer/_timeline.html.erb">
+      <file leaf-file-name="edit.js.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/events/edit.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="26" selection-start="375" selection-end="375" vertical-scroll-proportion="-4.48">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="14" selection-start="591" selection-end="591" vertical-scroll-proportion="0.0">
+            <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_settings_pane.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/explorer/_settings_pane.html.erb">
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/events/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="42" selection-start="614" selection-end="614" vertical-scroll-proportion="-9.6">
+            <state line="15" column="57" selection-start="0" selection-end="771" vertical-scroll-proportion="-9.6">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="historacleController.js.coffee" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/historacleController.js.coffee">
+      <file leaf-file-name="_index_by_chronicle.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/events/_index_by_chronicle.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="31" selection-start="3140" selection-end="3140" vertical-scroll-proportion="0.77517563">
+            <state line="18" column="23" selection-start="806" selection-end="806" vertical-scroll-proportion="-11.52">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="timeline.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/timeline.js.coffee">
+      <file leaf-file-name="_new.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/events/_new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="80" selection-start="4277" selection-end="4277" vertical-scroll-proportion="0.0">
+            <state line="79" column="14" selection-start="243" selection-end="2444" vertical-scroll-proportion="-23.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="historacle.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/historacle.js">
+      <file leaf-file-name="new.js.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/events/new.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="38" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="0" column="4" selection-start="4" selection-end="18" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <file leaf-file-name="show.js.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/events/show.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
+            <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_show.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/events/_show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="48" selection-start="341" selection-end="341" vertical-scroll-proportion="0.28381374">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="events.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/events.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="82" column="0" selection-start="1527" selection-end="1527" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chronicles_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/chronicles_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="36" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -190,22 +214,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/layouts/historacle.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/historacleMap.js" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
-        <option value="$PROJECT_DIR$/app/views/explorer/timeline.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/moment.js" />
-        <option value="$PROJECT_DIR$/app/views/explorer/_events_pane.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/explorer/index.html.erb" />
-        <option value="$PROJECT_DIR$/config/environment.rb" />
-        <option value="$PROJECT_DIR$/config/application.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/timeline.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/timeline.js.coffee" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/historacle.js" />
-        <option value="$PROJECT_DIR$/app/views/explorer/_timeline.html.erb" />
-        <option value="$PROJECT_DIR$/vendor/assets/javascripts/angular.min.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/historacleController.js.coffee" />
+        <option value="$PROJECT_DIR$/app/views/events/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/events.js" />
+        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+        <option value="$PROJECT_DIR$/app/views/events/_new_html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/chronicles_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/events_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/events/new.js.erb.js" />
+        <option value="$PROJECT_DIR$/app/views/events/_new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/events/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/events/new.js.erb" />
+        <option value="$PROJECT_DIR$/app/views/events/edit.js.erb" />
+        <option value="$PROJECT_DIR$/app/views/events/_index_by_chronicle.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/events/show.js.erb" />
+        <option value="$PROJECT_DIR$/app/views/events/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/events.scss" />
+        <option value="$PROJECT_DIR$/app/views/events/_show.html.erb" />
       </list>
     </option>
   </component>
@@ -220,6 +244,28 @@
     <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="874" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>JSUnresolvedVariable</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -248,6 +294,7 @@
     </navigator>
     <panes>
       <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -290,141 +337,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="historacle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="historacle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="historacle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="historacle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="historacle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="historacle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="historacle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="historacle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="historacle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="historacle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="historacle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="historacle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="historacle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="historacle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="explorer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -461,6 +378,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chronicles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historacle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -521,32 +478,9 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="historacle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="historacle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -587,10 +521,10 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/vendor/assets/javascripts" />
+      <recent name="$PROJECT_DIR$/vendor/assets/stylesheets" />
+      <recent name="$PROJECT_DIR$/vendor/assets" />
       <recent name="$PROJECT_DIR$/public/explorer" />
       <recent name="$PROJECT_DIR$/app/assets/javascripts" />
-      <recent name="$PROJECT_DIR$/app/assets/stylesheets" />
-      <recent name="$PROJECT_DIR$/vendor/assets/stylesheets" />
     </key>
   </component>
   <component name="RunManager" selected="Rails.Development: historacleMap">
@@ -918,8 +852,8 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41335046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25824964" sideWeight="0.21879022" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26040173" sideWeight="0.6469833" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35301667" sideWeight="0.9845041" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23816356" sideWeight="0.70988446" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29011554" sideWeight="0.9845041" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25824964" sideWeight="0.21879022" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948583" sideWeight="0.500612" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32689834" sideWeight="0.49510404" order="2" side_tool="false" content_ui="tabs" />
@@ -991,122 +925,114 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/events.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="3" selection-start="118" selection-end="118" vertical-scroll-proportion="0.15037593">
+        <state line="56" column="4" selection-start="1890" selection-end="1890" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/historacleMap.js">
+    <entry file="file://$PROJECT_DIR$/app/views/chronicles/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="13" selection-start="2302" selection-end="2302" vertical-scroll-proportion="0.3680431">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20120815075854_create_events.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/historacle.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="62" selection-start="391" selection-end="391" vertical-scroll-proportion="0.51705563">
+        <state line="13" column="23" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/explorer.scss">
+    <entry file="file://$PROJECT_DIR$/app/views/events/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="177" column="33" selection-start="2742" selection-end="2833" vertical-scroll-proportion="0.3016627">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+    <entry file="file://$PROJECT_DIR$/app/views/chronicles/_index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="603" selection-end="603" vertical-scroll-proportion="0.64608073">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/events_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="0" selection-start="2819" selection-end="2819" vertical-scroll-proportion="0.695962">
+        <state line="31" column="0" selection-start="666" selection-end="666" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/explorer/_events_pane.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/events/new.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="56" selection-start="965" selection-end="965" vertical-scroll-proportion="0.02631579">
+        <state line="0" column="4" selection-start="4" selection-end="18" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/timeline.js.coffee">
+    <entry file="file://$PROJECT_DIR$/app/views/events/_index_by_chronicle.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="80" selection-start="4277" selection-end="4277" vertical-scroll-proportion="0.0">
+        <state line="18" column="23" selection-start="806" selection-end="806" vertical-scroll-proportion="-11.52">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/historacle.js">
+    <entry file="file://$PROJECT_DIR$/app/views/events/show.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="38" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
+        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/assets/javascripts/angular.min.js">
+    <entry file="file://$PROJECT_DIR$/app/views/events/_new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1161" column="31" selection-start="38269" selection-end="38269" vertical-scroll-proportion="0.6318182">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1365404203000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1365404203000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/explorer/_timeline.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="26" selection-start="375" selection-end="375" vertical-scroll-proportion="-4.48">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="14" selection-start="591" selection-end="591" vertical-scroll-proportion="0.0">
+        <state line="79" column="14" selection-start="243" selection-end="2444" vertical-scroll-proportion="-23.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/explorer/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/events/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="53" selection-start="53" selection-end="53" vertical-scroll-proportion="-0.0">
+        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/explorer/_settings_pane.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/events/edit.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="42" selection-start="614" selection-end="614" vertical-scroll-proportion="-9.6">
+        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/historacleController.js.coffee">
+    <entry file="file://$PROJECT_DIR$/app/views/events/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="31" selection-start="3140" selection-end="3140" vertical-scroll-proportion="0.77517563">
+        <state line="15" column="57" selection-start="0" selection-end="771" vertical-scroll-proportion="-9.6">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/chronicles_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="36" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/events.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="0" selection-start="1527" selection-end="1527" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/events/_show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="48" selection-start="341" selection-end="341" vertical-scroll-proportion="0.28381374">
           <folding />
         </state>
       </provider>

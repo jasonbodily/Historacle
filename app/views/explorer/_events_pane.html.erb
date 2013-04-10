@@ -1,51 +1,32 @@
 <div id="events-view" class="carousel slide">
 
-  <div id="events-view-arrows">
+  <div id="events-view-arrows" ng-hide="isEmpty(events)">
     <a class="viewer-arrow left" href="#events-view" data-slide="prev"><i class="icon-chevron-left"></i></a>
     <a class="viewer-arrow right" href="#events-view" data-slide="next"><i class="icon-chevron-right"></i></a>
   </div>
 
-  <% if true %>
-     <div id="events-view-indicators">
-       <ol class="carousel-indicators">
-         <li ng-repeat="event in events" data-target="#events-view" data-slide-to="{{event.id}}" class=""></li>
-       </ol>
-     </div>
-     <div id="event-view-empty" class="muted" ng-show="isEmpty(events)"><i>No Chronicles Selected</i></div>
-     <!-- Carousel items -->
-     <div id="events-view-carousel" class="carousel-inner">
-      <fieldset ng-repeat="event in events | orderBy:'start_date'" class="item event-item">
-        <p class="event-date">{{event.start_date | date:'MMMM dd, yyyy'}}</p>
+  <div id="events-view-indicators">
+    <ol class="carousel-indicators">
+      <li ng-repeat="event in events" data-target="#events-view" data-slide-to="{{$index}}" class="" ></li>
+    </ol>
+  </div>
 
-        <p class="event-location">{{event.location}}</p>
+  <div class="view-empty muted" ng-show="isEmpty(events)"><i>No Chronicles Selected</i></div>
+  <!-- Carousel items -->
+  <div id="events-view-carousel" class="carousel-inner">
+    <fieldset id="view-event-{{event.id}}" ng-repeat="event in events | orderBy:'start_date'" class="item event-item">
+      <p class="event-date">{{event.start_date | date:'MMMM dd, yyyy'}}</p>
+      <p class="event-location">{{event.location}}</p>
+      <p class="event-title">{{event.title}}</p>
+      <img src="{{event.image_url}}" alt="">
+      <p class="event-description">{{event.description}}</p>
+    </fieldset>
+  </div>
 
-        <p class="event-title">{{event.title}}</p>
-        <img src="{{event.image_url}}" alt="">
-
-        <p class="event-description">{{event.description}}</p>
-      </fieldset>
-     </div>
-
-  <% end %>
 </div>
 
-<% if false %>
-
-   <% events = Event.all %>
-   <!-- Carousel nav -->
-   <div id="events-view-indicators">
-     <ol class="carousel-indicators">
-       <% events.each_with_index do |a, index| %>
-          <li data-target="#events-view" data-slide-to="<%= index %>" class="<%= index == 0 ? "active" : "" %>"></li>
-       <% end %>
-     </ol>
-   </div>
-
-   <!-- Carousel items -->
-   <div id="events-view-carousel" class="carousel-inner">
-     <% events.each_with_index do |event, index| %>
-        <div class="<%= index == 0 ? "active" : "" %> item event-item"><%= render "events/event", event: event %></div>
-     <% end %>
-   </div>
-
-<% end %>
+<script type="text/javascript">
+   $(function () {
+      $('#events-view').carousel({interval: false});
+   });
+</script>

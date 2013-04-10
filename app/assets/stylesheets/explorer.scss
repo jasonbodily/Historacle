@@ -6,7 +6,7 @@ $right_margin: 380px;
   height:100%;
 }
 
-.dashboard {
+#dashboard {
   position: absolute;
   top: 40px;
   right:0;
@@ -17,7 +17,7 @@ $right_margin: 380px;
   min-width: 1250px;
 }
 
-.dashboard > div[id$=wrapper] > div {
+#dashboard > div[id$=wrapper] > div {
   height: 100%;
   border-radius: 5px;
   box-shadow: 0px 4px 10px -5px #000000;
@@ -198,7 +198,7 @@ svg {
   height:100%;
 }
 
-#event-view-empty {
+.view-empty {
   padding: 0 5px 0 5px;
   position: absolute;
   top: 15px;
@@ -207,4 +207,9 @@ svg {
 
 #events-view {
   height: 100%;
+}
+
+
+#events-view-carousel fieldset {
+  overflow-y: scroll;
 }

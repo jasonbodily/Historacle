@@ -1,21 +1,31 @@
+<div class="pricing-table">
+  <div class="color-666777">
+    <h3><%= @event.title%></h3>
 
-  <% if @event.image_url %>
-     <img src="<%= @event.image_url %>" alt="">
-  <% end %>
+    <div class="title pull-centered"><%= @event.start_date.strftime("%b %e %Y") + " - " + @event.end_date.strftime("%b %e %Y")  %></div>
 
-  <blockquote>
-    <p><%= @event.title %></p>
-    <small><%= @event.location %></small>
-    <small><%= @event.start_date %></small>
-  </blockquote>
+    <% if @event.image_url %>
+       <div class="pull-centered">
+       <img src="<%= @event.image_url %>" alt="">
+       </div>
+    <% end %>
 
-  <%= link_to "Edit", edit_chronicle_event_path(@event.chronicle, @event), remote: true %>
+    <p>
+      <b>Description:</b>
+      <%= @event.description %>
+    </p>
 
-  <p><%= @event.description %></p>
+    <% @event.properties.each do |name, value| %>
+       <% unless value.to_s == "" %>
+          <div><b><%= name %></b></div>
+          <div class="inline-help"><%= value %></div>
+       <% end %>
+    <% end %>
 
-  <% @event.properties.each do |name, value| %>
-     <% unless value.to_s == "" %>
-        <div><b><%= name %></b></div>
-        <div class="inline-help"><%= value %></div>
-     <% end %>
-  <% end %>
+    <%= link_to "Edit", edit_chronicle_event_path(@event.chronicle, @event), remote: true %>
+
+  </div>
+</div>
+
+
+
