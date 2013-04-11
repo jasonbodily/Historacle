@@ -1,19 +1,47 @@
-<p>
-  <b>Name:</b>
-  <%= @chronicle.name %>
-</p>
+<div class="row">
 
-<p>
-  <b>Description:</b>
-  <%= @chronicle.description %>
-</p>
+  <div class="span6">
+    <div class="crud-wrapper">
+      <div class="crud-panel">
 
-<p>
-  <b>Subject:</b>
-  <%= @chronicle.subject %>
-</p>
+        <div class="title wallpaper">
+          <h3><%= @chronicle.name %></h3>
+        </div>
 
-<%= render 'events/index_by_chronicle' %>
+        <div class="details">
+          <p>
+            Description: <%= @chronicle.description %>
+          </p>
 
-<%= link_to 'Edit', edit_chronicle_path(@chronicle) %> |
-<%= link_to 'Back', chronicles_path %>
+          <p>
+            Subject: <%= @chronicle.subject %>          </br>
+          </p>
+
+          <%= link_to "Edit", edit_chronicle_path(@chronicle) %>  |
+          <%= link_to "Share", edit_chronicle_path(@chronicle) %>  |
+          <%= link_to "Find Others", edit_chronicle_path(@chronicle) %>
+
+        </div>
+
+        <%= render 'events/index_by_chronicle' %>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="featured-event" class="span6">
+    <%= render 'events/new' %>
+  </div>
+</div>
+
+<br/>
+
+<%= link_to 'New Event', new_chronicle_event_path(@chronicle, Event.new) %>
+
+<h2>Import</h2>
+
+<%= form_tag import_chronicle_events_path(@chronicle), multipart: true do %>
+   <%= file_field_tag :file %>
+   <%= submit_tag "Import" %>
+<% end %>
+

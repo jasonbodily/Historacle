@@ -16,10 +16,11 @@ class ChroniclesController < ApplicationController
   # GET /chronicles/1.json
   def show
     @chronicle = Chronicle.find(params[:id])
-    @events =  @chronicle.events.order(sort_column2 + " " + sort_direction2).paginate(:per_page =>10, :page => params[:page])
-    @event = @chronicle.events.build
+    @events = @chronicle.events.order(sort_column2 + " " + sort_direction2).paginate(:per_page =>10, :page => params[:page])
+    @event = Event.new(chronicle_id: @chronicle.id)
     respond_to do |format|
       format.html # show.html.erb
+      format.js
       format.json { render json: @chronicle }
     end
   end

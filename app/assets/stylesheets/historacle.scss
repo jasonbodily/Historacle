@@ -18,16 +18,6 @@
 $border_margin: 20px;
 $right_margin: 380px;
 
-a {
-  color: #FFFF66;
-  cursor: hand;
-  cursor: pointer;
-}
-
-a:hover {
-  color: #FFFF00;
-  text-decoration: none;
-}
 
 .table-index tr[data-link]:hover {
   cursor: pointer;

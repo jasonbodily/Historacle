@@ -1,37 +1,21 @@
-<div class="row">
-
-  <div class="span6">
+<div class="sub-title wallpaper">
+  <div class="pull-right">
     <%= will_paginate @events, next_label: '<i class="icon-arrow-right"></i>', previous_label: '<i class="icon-arrow-left" ></i>' %>
-    <table id="index-chronicle-events" class="table table-index table-striped table-hover">
-      <tr>
-        <th><%= sortable "title", "Title" %></th>
-        <th><%= sortable "start_date", "Date" %></th>
-        <th></th>
-      </tr>
-
-      <% @events.each do |event| %>
-         <tr data-link="<%= chronicle_event_path(@chronicle, event) %>">
-           <td><%= event.title %></td>
-           <td><%= event.start_date.strftime('%b %d, %Y') %></td>
-           <td><%= link_to 'Destroy', chronicle_event_path(@chronicle, event), method: :delete, data: {confirm: 'Are you sure?'} %></td>
-         </tr>
-      <% end %>
-    </table>
-
-  </div>
-
-  <div id="featured-event" class="span6">
-   <%=  render 'events/new' %>
   </div>
 </div>
 
-<br/>
+<table id="index-chronicle-events" class="table table-index table-striped table-hover">
+  <tr>
+    <th class="date"><%= sortable "start_date", "Date" %></th>
+    <th class="title"><%= sortable "title", "Event" %></th>
+    <th class="action"></th>
+  </tr>
 
-<%= link_to 'New Event', new_chronicle_event_path(@chronicle, Event.new) %>
-
-<h2>Import</h2>
-
-<%= form_tag import_chronicle_events_path(@chronicle), multipart: true do  %>
-   <%=  file_field_tag :file %>
-   <%=  submit_tag "Import" %>
-<% end %>
+  <% @events.each do |event| %>
+     <tr data-link="<%= chronicle_event_path(@chronicle, event) %>">
+       <td><%= event.start_date.strftime('%Y %b %d ') %></td>
+       <td><%= event.title %></td>
+       <td><%= link_to '<i class="icon-remove"></i>'.html_safe, chronicle_event_path(@chronicle, event), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+     </tr>
+  <% end %>
+</table>

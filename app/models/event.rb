@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-  attr_accessible :title, :start_date, :end_date, :description, :latitude, :location, :longitude, :image_url
+  attr_accessible :title, :chronicle_id, :start_date, :end_date, :description, :latitude, :location, :longitude, :image_url
   validates_presence_of :title
   belongs_to :chronicle
 

@@ -1,0 +1,20 @@
+<div class="title">
+  <h3><%= @chronicle.name %></h3>
+  <div class="pull-right"><%= link_to '<i class="icon-edit"></i>'.html_safe, edit_chronicle_path(@chronicle) %></div>
+
+</div>
+
+<div class="details">
+  <p>
+    Description: <%= @chronicle.description %>
+  </p>
+
+  <p>
+    Subject: <%= @chronicle.subject %>          </br>
+  </p>
+
+  <%= link_to "Edit", edit_chronicle_path(@chronicle) %>
+  <div class="pull-right">
+    <%= will_paginate @events, next_label: '<i class="icon-arrow-right"></i>', previous_label: '<i class="icon-arrow-left" ></i>' %>
+  </div>
+</div>

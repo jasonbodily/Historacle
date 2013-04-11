@@ -1,6 +1,19 @@
 $border_margin: 20px;
 $right_margin: 380px;
 
+
+
+a {
+  color: #FFFF66;
+  cursor: hand;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #fafa00;
+  text-decoration: none;
+}
+
 #map {
   width:100%;
   height:100%;
