@@ -11,7 +11,10 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
+//= require jQDateRange
+//= require jQDateRangeRuler
 //= require bootstrap
 //= require events
 //= require chronicles
@@ -29,15 +32,26 @@ $(function () {
 //      return false;
 //   });
 
+   $(document).on('click', '.pagination a', function () {
+      $.rails.handleRemote($(this));
+      return false;
+   });
 
-
-   $("#index-chronicle-events tr[data-link]").click(function () {
+   $(document).on('click', "#index-chronicle-events tr[data-link]", function () {
       $.getScript(this.dataset.link);
+      return false;
    });
 
-   $("#index-library-chronicles tr[data-link]").click(function () {
+   $(document).on('click',"#index-library-chronicles tr[data-link]", function () {
       window.location = this.dataset.link;
+      return false;
    });
-});
 
+   $(document).on('click',".icon-upload", function () {
+      $('#featured-event').html($('.hidden-event-import').html());
+      return false;
+   });
+
+
+});
 

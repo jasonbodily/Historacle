@@ -1,47 +1,81 @@
 <div class="row">
+  <div class="span12 crud-drawer">
+    <div class="row">
+      <div class="span6">
+        <div class="crud-wrapper">
+          <div class="crud-wrapper-inner">
+            <div class="crud-panel">
+              <div class="title wallpaper">
+                <h3><%= @chronicle.name %></h3>
 
-  <div class="span6">
-    <div class="crud-wrapper">
-      <div class="crud-panel">
+                <div class="dates"><%= get_chronicle_date(@chronicle) %></div>
+              </div>
 
-        <div class="title wallpaper">
-          <h3><%= @chronicle.name %></h3>
+              <div class="details">
+
+                <p> Description: <%= @chronicle.description %> </p>
+
+                <p> Subject: <%= @chronicle.subject %> </p>
+
+                <ul id="chronicle-tabs" class="nav nav-tabs">
+                  <li class="active"><a href="#events-index-pane" data-toggle="tab">Events</a></li>
+                  <li><a href="#areas-index-pane" data-toggle="tab">Areas</a></li>
+                </ul>
+
+              </div>
+
+              <div class="tab-content">
+                <div id="events-index-pane" class="tab-pane active">
+                  <%= render 'events/index_by_chronicle' %>
+                </div>
+                <div id="areas-index-pane" class="tab-pane">
+                  <%#= render 'areas/index_by_chronicle' %>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="footer wallpaper"></div>
+          </div>
         </div>
+      </div>
 
-        <div class="details">
-          <p>
-            Description: <%= @chronicle.description %>
-          </p>
+      <div id="featured-event" class="span6">
 
-          <p>
-            Subject: <%= @chronicle.subject %>          </br>
-          </p>
-
-          <%= link_to "Edit", edit_chronicle_path(@chronicle) %>  |
-          <%= link_to "Share", edit_chronicle_path(@chronicle) %>  |
-          <%= link_to "Find Others", edit_chronicle_path(@chronicle) %>
-
-        </div>
-
-        <%= render 'events/index_by_chronicle' %>
-
+        <!--<div id="empty-pane" class="tab-pane active">-->
+          <!--<%#= render 'areas/index_by_chronicle' %>-->
+        <!--</div>-->
+        <!--<div id="new-event-pane" class="tab-pane">-->
+          <!--<%#= render 'events/new' %>-->
+        <!--</div>-->
+        <!--<div id="edit-event-pane" class="tab-pane">-->
+          <!--<%#= render 'areas/index_by_chronicle' %>-->
+        <!--</div>-->
+        <!--<div id="view-event-pane" class="tab-pane">-->
+          <!--<%#= render 'areas/index_by_chronicle' %>-->
+        <!--</div>-->
+        <!--<div id="import-events-pane" class="tab-pane">-->
+          <!--<%#= render 'areas/index_by_chronicle' %>-->
+        <!--</div>-->
       </div>
     </div>
+
   </div>
 
-  <div id="featured-event" class="span6">
-    <%= render 'events/new' %>
-  </div>
 </div>
 
 <br/>
 
-<%= link_to 'New Event', new_chronicle_event_path(@chronicle, Event.new) %>
+<%#= link_to 'New Event', new_chronicle_event_path(@chronicle, Event.new) %>
 
-<h2>Import</h2>
 
-<%= form_tag import_chronicle_events_path(@chronicle), multipart: true do %>
-   <%= file_field_tag :file %>
-   <%= submit_tag "Import" %>
-<% end %>
+<div class="hidden-event-import" style="display:none;">
+  <h2>Import</h2>
+
+  <%= form_tag import_chronicle_events_path(@chronicle), multipart: true do %>
+     <%= file_field_tag :file %>
+     <%= submit_tag "Import" , class: 'btn' %>
+  <% end %>
+</div>
+
 

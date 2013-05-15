@@ -5,8 +5,24 @@ body {
 
 //Bootstrap
 @import "bootstrap";
-@import "bootstrap-responsive";
+//@import "bootstrap-responsive";
 @import "font-awesome";
+
+.container-slim {
+  padding: 0 20px;
+}
+
+
+a {
+  color: #ffff78;
+  cursor: hand;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #fafa00;
+  text-decoration: none;
+}
 
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
@@ -93,7 +109,7 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  color:white;
+  color: white;
   font-family: "Raleway", Sans-Serif;
 }
 
@@ -118,7 +134,7 @@ body {
 
 .viewer-arrow i {
   color: #777777;
-  text-shadow: 3px 3px 3px rgba(0,0,0,.5);
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, .5);
   font-size: 28px;
 }
 
@@ -136,10 +152,10 @@ body {
 }
 
 #events-view-arrows {
-  height:50px;
+  height: 50px;
 }
 
-#events-view-carousel{
+#events-view-carousel {
   position: absolute;
   top: 50px;
   bottom: 5px;

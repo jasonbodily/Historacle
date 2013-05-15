@@ -1,0 +1,25 @@
+<div class="sub-title wallpaper">
+
+  <%= link_to '<i class="icon-plus"></i>'.html_safe, edit_chronicle_path(@chronicle) %>  |
+  <%= link_to '<i class="icon-upload"></i>'.html_safe, edit_chronicle_path(@chronicle) %>
+
+  <div class="pull-right">
+    <%= will_paginate @areas, next_label: '<i class="icon-arrow-right"></i>', previous_label: '<i class="icon-arrow-left" ></i>' %>
+  </div>
+</div>
+
+<table id="index-chronicle-areas" class="table table-index table-striped table-hover">
+  <tr>
+    <th class="date"><%= sortable "start_date", "Date" %></th>
+    <th class="title"><%= sortable "title", "Event" %></th>
+    <th class="action"></th>
+  </tr>
+
+  <% @areas.each do |area| %>
+     <tr data-link="<%= chronicle_area_path(@chronicle, area) %>">
+       <td><%= area.start_date.strftime('%Y %b %d ') %></td>
+       <td><%= area.title %></td>
+       <td><%= link_to '<i class="icon-remove"></i>'.html_safe, chronicle_area_path(@chronicle, area), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+     </tr>
+  <% end %>
+</table>

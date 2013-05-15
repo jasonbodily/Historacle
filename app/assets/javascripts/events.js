@@ -11,19 +11,7 @@ $(function () {
       });
    });
 
-   function updateGeoFields(results) {
-      var lat = results[0].geometry.location.lat(),
-         lng = results[0].geometry.location.lng();
-      $('#event_longitude').val(results[0].geometry.location.lng());
-      $('#event_latitude').val(results[0].geometry.location.lat());
-      $('#event_location').val(results[0].formatted_address);
-      if (lat && lng) {
-         updateMap(mapUrl([lat,lng]));
-      }
-
-   }
-
-   $('.geocode-input').blur(function () {
+   $(document).on('blur', '.geocode-input', function () {
       var address = $('.geocode-input').val();
       typeof geocoder === 'undefined' ? geocoder = new google.maps.Geocoder() : geocoder;
 
@@ -34,6 +22,17 @@ $(function () {
          }
       });
    });
+
+   function updateGeoFields(results) {
+      var lat = results[0].geometry.location.lat(),
+         lng = results[0].geometry.location.lng();
+      $('#event_longitude').val(results[0].geometry.location.lng());
+      $('#event_latitude').val(results[0].geometry.location.lat());
+      $('#event_location').val(results[0].formatted_address);
+      if (lat && lng) {
+         updateMap(mapUrl([lat,lng]));
+      }
+   }
 
    function mapUrl(coords) {
       return "http://maps.google.com/maps/api/staticmap?" + $.param({

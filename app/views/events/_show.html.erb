@@ -1,31 +1,31 @@
-<div class="pricing-table">
-  <div class="color-666777">
-    <h3><%= @event.title%></h3>
+<div class="event-view pull-center">
+  <h3><%= @event.title %></h3>
 
-    <div class="title pull-centered"><%= @event.start_date.strftime("%b %e %Y") + " - " + @event.end_date.strftime("%b %e %Y")  %></div>
+  <div class="title "><%= @event.print_dates %></div>
 
-    <% if @event.image_url %>
-       <div class="pull-centered">
-       <img src="<%= @event.image_url %>" alt="">
-       </div>
-    <% end %>
+  <% if @event.image_url %>
+     <div class="pull-center">
+       <b class="curl">
+         <b>
+           <img src="<%= @event.image_url %>" alt="">
+         </b>
+       </b>
+     </div>
+  <% end %>
 
-    <p>
-      <b>Description:</b>
-      <%= @event.description %>
-    </p>
+  <p>
+    <b>Description:</b>
+    <%= @event.description %>
+  </p>
 
-    <% @event.properties.each do |name, value| %>
-       <% unless value.to_s == "" %>
-          <div><b><%= name %></b></div>
-          <div class="inline-help"><%= value %></div>
-       <% end %>
-    <% end %>
+  <% @event.properties.each do |name, value| %>
+     <% unless value.to_s == "" %>
+        <div><b><%= name %></b></div>
+        <div class="inline-help"><%= value %></div>
+     <% end %>
+  <% end %>
 
-    <%= link_to "Edit", edit_chronicle_event_path(@event.chronicle, @event), remote: true %>
+  <%= link_to "Edit", edit_chronicle_event_path(@event.chronicle, @event), remote: true %>
 
-  </div>
+
 </div>
-
-
-

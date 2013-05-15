@@ -6,25 +6,25 @@
   //margin-left: 400px;
 }
 
-#new_event select[id$="date_1i"] {
+div[id$=event] select[id$="date_1i"] {
   width: 65px;
 }
 
-#new_event select[id$="date_2i"] {
+div[id$=event] select[id$="date_2i"] {
   float: left;
   width: 105px;
 }
 
-#new_event select[id$="date_3i"] {
+div[id$=event] select[id$="date_3i"] {
   float: left;
   width: 50px;
 }
 
-#new_event select[id$="date_4i"] {
+div[id$=event] select[id$="date_4i"] {
   width: 50px;
 }
 
-#new_event select[id$="date_5i"] {
+div[id$=event] select[id$="date_5i"] {
   width: 50px;
 }
 
@@ -32,152 +32,26 @@
   max-height: 300px;
 }
 
-.pricing-table {
-  width: 100%;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
-  float: left;
-  border: 5px solid #fff;
-  position: relative !important;
-  z-index: 6 !important;
-  -webkit-box-shadow: 0px 0px 4px rgba(0,0,0,.55);
-  -moz-box-shadow: 0px 0px 4px rgba(0,0,0,.55);
-  box-shadow: 0px 0px 4px rgba(0,0,0,.55);
+.event-view {
+  color: white;
+  padding: 15px 30px 15px 0;
+  overflow-y: scroll;
+  max-height: 660px;
 }
 
-.pricing-table h3 {
-  font-size: 16px;
-  text-align: center;
-  color: #fff;
-  padding: 6px 0;
-  margin: 0;
-  -webkit-border-radius: 5px 5px 0px 0px;
-  -moz-border-radius: 5px 5px 0px 0px;
-  border-radius: 5px 5px 0px 0px;
+.event-view img{
+  max-height: 500px;
 }
 
-.pricing-table li {
-  color: #888;
-  background: #fff;
-  text-align: center;
-  padding: 11px 0;
-  border-bottom: 1px solid #fff;
+.sub-title a {
+  padding: 0 10px;
 }
 
-.pricing-table li:nth-child(2n) {
-  background: #f6f6f6;
+.geocode-input {
+  width: 167px !important;
 }
 
-.pricing-table .color-666777 div.title {
-  background-color: #777;
-  padding: 15px 0;
-  color:white;
-  margin-bottom: 15px;
+.event-map {
+  display: none;
+  margin-top: 15px;
 }
-
-.pull-centered {
-  text-align: center;
-}
-
-.pricing-table .color-666777  div.title div.control-group {
-  margin: 0;
-}
-
-.pricing-table h4 {
-  padding:15px 0 10px 0;
-
-}
-
-/* Table
-=================================================================== */
-.pricing-table h3,
-.pricing-table h4 {
-  color: #fff;
-  margin: 0;
-}
-
-.price,
-.time {
-  display: block;
-  text-align: center;
-  line-height: 24px;
-}
-
-.price {
-  font-size: 24px;
-  font-weight: normal;
-}
-
-.time {
-  font-size: 12px;
-  font-weight: normal;
-}
-
-/* Color Schemes
-=================================================================== */
-
-/* Color - 1 */
-.pricing-table .color-cccddd h3, .color-cccddd .buy {background-color: #ccc;}
-.pricing-table .color-cccddd h4 {background-color: #ddd;}
-
-/* Color - 2 */
-.pricing-table .color-666777 h3, .color-666777 .buy {background-color: #666;}
-.pricing-table .color-666777 h4 {background-color: #777;}
-
-/* Color - 3 */
-.pricing-table .color-custom h3, .color-custom .buy {background-color: #111; padding: 15px 0 0 0;}
-.pricing-table .color-custom h4 {background-color: #222; padding: 35px 0;}
-
-.color-custom {
-  margin-top:-57px;
-}
-
-.pricing-table {
-  position: relative !important;
-  z-index: 5 !important;
-  margin: 60px 0px;
-}
-
-.pricing-table {
-  margin-top: 2px;
-  position: relative !important;
-  z-index: 6 !important;
-  -webkit-box-shadow: 0px 0px 4px rgba(0,0,0,.55);
-  -moz-box-shadow: 0px 0px 4px rgba(0,0,0,.55);
-  box-shadow: 0px 0px 4px rgba(0,0,0,.55);
-}
-
-.pricing-table ul {
-  list-style: none outside;
-  margin: 0;
-}
-
-.pricing-table .color-custom h3, .color-custom .buy {background-color: #e44d26; font-size: 20px}
-.pricing-table .color-custom h4 {background-color: #f16529;}
-
-
-a.buy {
-  text-align: center;
-  display: block;
-  color: #fff;
-  padding: 12px 0;
-  font-weight: bold;
-  font-size: 14px;
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-  -ms-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-  -webkit-border-radius: 0px 0px 5px 5px ;
-  -moz-border-radius: 0px 0px 5px 5px;
-  border-radius: 0px 0px 5px 5px;
-}
-
-a.buy:hover {
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-}
-
-

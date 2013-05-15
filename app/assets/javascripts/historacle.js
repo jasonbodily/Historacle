@@ -1,6 +1,8 @@
 //= require jquery
 //= require jquery-ui
 //= require jquery_ujs
+//= require jQDateRange
+//= require jQDateRangeRuler
 //= require bootstrap
 //= require angular.min
 //= require timeline

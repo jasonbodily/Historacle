@@ -1,11 +1,10 @@
 class Event < ActiveRecord::Base
   attr_accessible :title, :chronicle_id, :start_date, :end_date, :description, :latitude, :location, :longitude, :image_url
-  validates_presence_of :title
+  validates_presence_of :title, :latitude, :longitude
   belongs_to :chronicle
 
   serialize :properties, Hash
   geocoded_by :location
-  after_validation :geocode
 
   validate :validate_properties
 
@@ -23,6 +22,11 @@ class Event < ActiveRecord::Base
       event.attributes = row.to_hash.slice(*accessible_attributes)
       event.save!
     end
+  end
+
+  def print_dates
+    date_string = self.end_date ? " - " + self.end_date.strftime("%b %e %Y") : ""
+    self.start_date.strftime("%b %e %Y") + date_string
   end
 
 end

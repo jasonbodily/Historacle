@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130228060124) do
+ActiveRecord::Schema.define(:version => 20130411232112) do
+
+  create_table "areas", :force => true do |t|
+    t.string   "name"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.text     "coordinates"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "chronicle_fields", :force => true do |t|
     t.string   "name"
@@ -31,6 +40,8 @@ ActiveRecord::Schema.define(:version => 20130228060124) do
     t.string   "subject"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.datetime "early_date"
+    t.datetime "late_date"
   end
 
   create_table "events", :force => true do |t|

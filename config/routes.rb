@@ -1,5 +1,9 @@
 Historacle::Application.routes.draw do
 
+  resources :areas
+
+  get 'application/here'
+
   match "/explorer" => "explorer#index"
   get "explorer/index"
   get "explorer/index1"
@@ -14,7 +18,8 @@ Historacle::Application.routes.draw do
   resources :chronicles, only: [:create, :new, :edit, :show, :update, :destroy] do
     resources :events do
       collection { post :import }
-    end
+      end
+    resources :areas
   end
 
   devise_for :users

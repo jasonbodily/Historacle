@@ -1,115 +1,58 @@
-<div id="timeline-pane">
-  <div id="timeline-events">
-    <svg class="timeline-event-group">
-      <a class="timeline-event" ng-repeat="event in events" ng-click="selectEvent(event)">
-        <circle svg-cx="{{getCx(event.start_date)}}" svg-cy="{{getCy(event.chronicle_id)}}" r="5" svg-fill="{{getFill(event.chronicle_id)}}" stroke="black" stroke-width="1"></circle>
+<div id="timeline-pane" style="display:none;">
+  <div class="timeline-container">
+    <div id="timeline-line">
+
+      <div class="indicator" style="left:50%"><i class="icon-chevron-up"></i></div>
+      <div class="minor-lines"></div>
+      <!--<div class="major-lines" ng-hide="isEmpty(timeline.major_units)">-->
+
+      <!--<div ng-repeat="mu in timeline.major_units" style="{{getOffset(mu)}}">-->
+      <!--<div class="major-line"></div>-->
+      <!--{{ mu | date:'dd-MM-yyyy'}}-->
+      <!--</div>-->
+
+      <svg class="major-lines" ng-hide="isEmpty(timeline.major_units)">
+        <line ng-repeat="line in timeline.major_units" svg-x1="{{getFrameCx(line[0])}}" y1="0" svg-x2="{{getFrameCx(line[0])}}" y2="10"></line>
+        <text ng-repeat="line in timeline.major_units" svg-x="{{getFrameCx(line[0])}}" y="24">{{getLineLabel(line)}}</text>
+      </svg>
+
+      <!--</div>-->
+    </div>
+    <div class="timeline-overlay"></div>
+    <div id="timeline-events">
+      <svg class="event-group">
+        <a class="event" ng-repeat="event in events" ng-click="selectEvent(event)">
+          <circle svg-cx="{{getFrameCx(event.start_date)}}" svg-cy="{{getFrameCy(event.chronicle_id)}}" r="5" svg-fill="{{getFill(event.chronicle_id)}}" stroke="black" stroke-width="1"></circle>
+        </a>
+      </svg>
+    </div>
+
+  </div>
+
+  <div id="timeline-framer">
+
+    <svg class="event-group">
+      <a class="event" ng-repeat="event in events">
+        <!--<circle svg-cx="{{getAbsoluteCx(event.start_date)}}" cy="9" r="4" fill="rgb(198,198,198)" fill-opacity=".2"></circle>-->
+        <circle svg-cx="{{getAbsoluteCx(event.start_date)}}" cy="9" r="4" svg-fill="{{getFill(event.chronicle_id)}}" fill-opacity=".2"></circle>
       </a>
     </svg>
+
+    <div class="content"></div>
   </div>
 
-  <div id="timeline-line">
-    <div class="indicator" style="left:50%"><i class="icon-chevron-up"></i></div>
-    <div class="minor-lines"></div>
-    <div class="major-lines" ng-hide="isEmpty(events)">
-
-      <div ng-repeat="mu in timeline.major_units" style="{{getOffset(mu)}}">
-        <div class="major-line"></div>
-        {{ mu | date:'dd-MM-yyyy'}}
-      </div>
-
-    </div>
-  </div>
 </div>
 
 <style type="text/css">
 
-   .indicator {
-      position: absolute;
-      text-align: center;
-      margin-left: -10px;
-      width: 20px;
+   .major-lines line {
+      stroke: #c6c6c6;;
+      stroke-width: 3;
    }
 
-   #timeline-pane {
-      position: absolute;
-      left: 20px;
-      right: 20px;
-      bottom: 0;
-      top: 0;
+   .major-lines text {
       color: #c6c6c6;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 12px;
-   }
-
-   #timeline-line {
-      margin: 0 10px;
-      position: absolute;
-      top: 70px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-   }
-
-   .minor-lines {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 7px;
-      background: url('/images/minor-line.png');
-   }
-
-   .major-lines {
-      height: 10px;
-   }
-
-   .major-lines > div {
-      text-align: center;
-      position: absolute;
-      width: 40px;
-      margin-left: -20px;
-   }
-
-   .major-lines div:first-child {
-      left: 0 !important;
-   }
-
-   .major-lines div:last-child {
-      left: 100% !important;
-   }
-
-   .major-line {
-      margin-bottom: 5px;
-      height: 8px;
-      width: 20px;
-      border: solid #c6c6c6;
-      border-width: 0 2px 0 0;
-   }
-
-   #timeline-events {
-      height: 55%;
-      width: 100%;
-   }
-
-   a.timeline-event {
-      height: 10px;
-      width: 10px;
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-   }
-
-   a.timeline-event circle {
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-   }
-
-   .timeline-event-group {
-      position: absolute;
-      padding: 0 10px;
-      height: 100%;
-      width: 100%;
-
-      box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
+      text-anchor: middle;
    }
 
 </style>

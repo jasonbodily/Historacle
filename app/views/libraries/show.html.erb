@@ -1,5 +1,116 @@
+<div class="row">
+  <div class="span12">
+    <div class="library-wrapper">
+      <div class="library-wrapper-inner">
+        <div class="library-panel">
+          <div class="title wallpaper">
+            <h2><%= @library.name || "My Library" %></h2>
+          </div>
 
-<h1><%= @library.name || "My Library"%></h1> <%= link_to 'Edit', edit_library_path %>
-<%= render 'chronicles/index_by_library' %>
+          <div class="details">
+           <%= link_to 'Edit', edit_library_path %>  |
+           <%= link_to 'New Chronicle', new_chronicle_path %>
+          </div>
+          <div class="border" style="padding: 0 5px;">
+            <%= render 'chronicles/index_by_library' %>
+          </div>
 
 
+          <div class="footer wallpaper"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+
+   .library-panel {
+      height: 100%;
+      position: relative;
+      border-radius: 8px;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   }
+
+   .library-panel div.details {
+      padding: 10px;
+      color: white;
+      background-color: rgba(6, 6, 6, 0.75);
+   }
+
+   .library-panel div.sub-title {
+      padding: 10px;
+      min-height: 18px;
+      border-top: 1px solid #000;
+   }
+
+   .library-panel div.title h2 {
+      padding: 15px;
+      margin-bottom: 0;
+   }
+
+   .library-panel div.title {
+      margin-top: 0px;
+      border-radius: 8px 8px 0 0;
+      text-align: center;
+      border-bottom: 1px solid #000;
+   }
+
+   .library-panel .control-bar {
+      background: url(/images/bg-wrapper.jpg);
+   }
+
+   .library-wrapper h4{
+      font-weight: 200px;
+   }
+
+   .library-wrapper {
+      border-radius: 8px;
+      -webkit-box-shadow: 3px 0px 15px -2px rgb(0, 0, 0);
+   }
+
+   .library-wrapper-inner {
+      position: relative;
+      border-radius: 8px;
+      background: white;
+   //padding: 3px 3px 3px 4px;
+   //-webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.55);
+   //-moz-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.55);
+   //box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.55);
+   }
+
+   .library-wrapper .footer {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      min-height: 30px;
+      border-radius: 0 0 8px 8px;
+   }
+
+   .library-panel table {
+      padding: 0 10px 10px 10px;
+   }
+
+   .library-panel table tr:nth-child(2n) {
+      background: url(/images/bg-wrapper.jpg);
+   }
+
+   .library-panel table tr:nth-child(odd) th,
+   .library-panel table tr:nth-child(odd) td {
+      background-color: transparent;
+   //background: url(/images/bg-wrapper2.jpg);
+   }
+
+   .library-panel table a {
+      color: #878787;
+      cursor: hand;
+      cursor: pointer;
+   }
+
+   .library-panel table a:hover {
+      color: #787878;
+      text-decoration: none;
+   }
+
+</style>

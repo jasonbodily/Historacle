@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @area.name %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @area.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @area.end_date %>
+</p>
+
+<p>
+  <b>Coordinates:</b>
+  <%= @area.coordinates %>
+</p>
+
+
+<%= link_to 'Edit', edit_area_path(@area) %> |
+<%= link_to 'Back', areas_path %>

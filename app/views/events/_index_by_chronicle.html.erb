@@ -1,4 +1,8 @@
 <div class="sub-title wallpaper">
+
+  <%= link_to '<i class="icon-plus"></i>'.html_safe, new_chronicle_event_path(@chronicle), remote: true %>  |
+  <%= link_to '<i class="icon-upload"></i>'.html_safe, '#' %>
+
   <div class="pull-right">
     <%= will_paginate @events, next_label: '<i class="icon-arrow-right"></i>', previous_label: '<i class="icon-arrow-left" ></i>' %>
   </div>
@@ -13,7 +17,7 @@
 
   <% @events.each do |event| %>
      <tr data-link="<%= chronicle_event_path(@chronicle, event) %>">
-       <td><%= event.start_date.strftime('%Y %b %d ') %></td>
+       <td><%= event.start_date.strftime('%Y %b %d') if event.start_date %></td>
        <td><%= event.title %></td>
        <td><%= link_to '<i class="icon-remove"></i>'.html_safe, chronicle_event_path(@chronicle, event), method: :delete, data: {confirm: 'Are you sure?'} %></td>
      </tr>
